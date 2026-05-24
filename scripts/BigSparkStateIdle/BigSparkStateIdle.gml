@@ -1,0 +1,4 @@
+function BigSparkStateIdle(){
+	emotion = "happy";
+	
+}

@@ -1,0 +1,1 @@
+array_set(Oitem_manager.inv, 1, global.item_list.mglass);

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ItemTextFind",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ItemTextFind",
+  "parent":{
+    "name":"Finders",
+    "path":"folders/Scripts/Text/Finders.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

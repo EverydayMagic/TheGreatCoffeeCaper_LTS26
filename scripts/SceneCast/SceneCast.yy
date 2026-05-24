@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"SceneCast",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"SceneCast",
+  "parent":{
+    "name":"Cutscene_Tools",
+    "path":"folders/Scripts/Cutscene_Tools.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

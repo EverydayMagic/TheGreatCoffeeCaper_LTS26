@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"goTo",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"goTo",
+  "parent":{
+    "name":"Cutscene_Tools",
+    "path":"folders/Scripts/Cutscene_Tools.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

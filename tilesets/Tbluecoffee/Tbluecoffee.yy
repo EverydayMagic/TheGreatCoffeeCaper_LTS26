@@ -1,0 +1,42 @@
+{
+  "$GMTileSet":"v1",
+  "%Name":"Tbluecoffee",
+  "autoTileSets":[],
+  "macroPageTiles":{
+    "SerialiseHeight":0,
+    "SerialiseWidth":0,
+    "TileSerialiseData":[],
+  },
+  "name":"Tbluecoffee",
+  "out_columns":4,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
+  "parent":{
+    "name":"Water Anims",
+    "path":"folders/Tile Sets/Water Anims.yy",
+  },
+  "resourceType":"GMTileSet",
+  "resourceVersion":"2.0",
+  "spriteId":{
+    "name":"Sbluecoffee_tl",
+    "path":"sprites/Sbluecoffee_tl/Sbluecoffee_tl.yy",
+  },
+  "spriteNoExport":true,
+  "textureGroupId":{
+    "name":"Default",
+    "path":"texturegroups/Default",
+  },
+  "tileAnimationFrames":[
+    {"$GMTileAnimation":"","%Name":"darkcliff_grass","frames":[8,9,10,11,],"name":"darkcliff_grass","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
+    {"$GMTileAnimation":"","%Name":"darkcliff_smallcorner","frames":[12,13,14,15,],"name":"darkcliff_smallcorner","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
+    {"$GMTileAnimation":"","%Name":"darkcliff_curvecorner","frames":[4,5,6,7,],"name":"darkcliff_curvecorner","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
+  ],
+  "tileAnimationSpeed":4.0,
+  "tileHeight":16,
+  "tilehsep":0,
+  "tilevsep":0,
+  "tileWidth":16,
+  "tilexoff":0,
+  "tileyoff":0,
+  "tile_count":16,
+}

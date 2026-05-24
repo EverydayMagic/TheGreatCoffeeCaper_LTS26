@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"SceneNumIncrease",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"SceneNumIncrease",
+  "parent":{
+    "name":"Cutscene_Tools",
+    "path":"folders/Scripts/Cutscene_Tools.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

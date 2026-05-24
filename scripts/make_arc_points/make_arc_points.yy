@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"make_arc_points",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"make_arc_points",
+  "parent":{
+    "name":"Math",
+    "path":"folders/Scripts/Math.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"set_song_ingame",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"set_song_ingame",
+  "parent":{
+    "name":"Audio",
+    "path":"folders/Scripts/Audio.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"MoveOrder_Functions",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"MoveOrder_Functions",
+  "parent":{
+    "name":"Cutscene_Tools",
+    "path":"folders/Scripts/Cutscene_Tools.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

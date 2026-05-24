@@ -1,0 +1,1 @@
+global.glass_id[0] = self.id;

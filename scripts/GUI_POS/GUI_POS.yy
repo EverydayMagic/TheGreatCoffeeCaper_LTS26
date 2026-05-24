@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"GUI_POS",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"GUI_POS",
+  "parent":{
+    "name":"Math",
+    "path":"folders/Scripts/Math.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

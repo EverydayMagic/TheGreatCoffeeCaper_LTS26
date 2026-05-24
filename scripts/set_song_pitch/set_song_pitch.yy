@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"set_song_pitch",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"set_song_pitch",
+  "parent":{
+    "name":"Audio",
+    "path":"folders/Scripts/Audio.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

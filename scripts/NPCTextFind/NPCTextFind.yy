@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"NPCTextFind",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"NPCTextFind",
+  "parent":{
+    "name":"Finders",
+    "path":"folders/Scripts/Text/Finders.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

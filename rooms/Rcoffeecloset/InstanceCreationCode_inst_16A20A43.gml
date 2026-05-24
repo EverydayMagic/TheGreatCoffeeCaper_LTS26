@@ -1,0 +1,1 @@
+sprite_index = Scoffee_barrel;

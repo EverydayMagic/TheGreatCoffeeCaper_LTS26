@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"angleDifference",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"angleDifference",
+  "parent":{
+    "name":"Math",
+    "path":"folders/Scripts/Math.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"FlavorTextFind",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"FlavorTextFind",
+  "parent":{
+    "name":"Finders",
+    "path":"folders/Scripts/Text/Finders.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

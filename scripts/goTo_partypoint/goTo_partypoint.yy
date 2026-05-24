@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"goTo_partypoint",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"goTo_partypoint",
+  "parent":{
+    "name":"Other",
+    "path":"folders/Scripts/Other.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

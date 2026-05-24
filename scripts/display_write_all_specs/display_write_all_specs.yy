@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"display_write_all_specs",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"display_write_all_specs",
+  "parent":{
+    "name":"Drawing",
+    "path":"folders/Scripts/Drawing.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
