@@ -268,7 +268,7 @@ global.item_list =
 			10,
 			1,
 			"Apple",
-			true,
+			true
 		),
 		
 		pie : new create_item(
@@ -281,7 +281,7 @@ global.item_list =
 			75,
 			1,
 			"Apple Pie",
-			true,
+			true
 		),
 		
 	#endregion
@@ -301,7 +301,7 @@ global.item_list =
 			},
 			1,
 			"Screw",
-			false,
+			false
 		),
 		
 	#endregion

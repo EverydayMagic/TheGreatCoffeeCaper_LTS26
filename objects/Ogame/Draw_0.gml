@@ -5,5 +5,5 @@
 //if (grid)
 //		draw_sprite(Sgrid, 0, 0, 0);
 
-;
+
 

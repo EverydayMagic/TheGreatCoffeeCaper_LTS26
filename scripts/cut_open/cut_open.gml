@@ -237,7 +237,7 @@ function cut_open(){
 		//move 67
 			function(){ set_song_ingame("Prologue_Segment3.ogg"); add_move_order(); },
 			function() {
-				costume_change(Ojoeturtle, Ojoeturtle.darkshocked_spr, 0, false, "no");
+				Ojoeturtle.sprite_index = Ojoeturtle.darkshocked_spr;
 				//dark mode
 				layer_set_visible("DarkDec", true);
 				layer_set_visible("DarkBase", true);

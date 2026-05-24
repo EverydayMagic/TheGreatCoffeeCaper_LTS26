@@ -23,5 +23,5 @@ function cos_oscillate(_min, _max, _duration, _pos = get_timer()) {
 }
 
 function steps_to_microseconds(_steps) {
-	return 1000000 * (_steps/room_speed)
+	return 1000000 * (_steps/FRAME_RATE)
 }

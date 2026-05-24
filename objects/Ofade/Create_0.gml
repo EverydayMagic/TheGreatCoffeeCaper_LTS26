@@ -61,4 +61,4 @@ iris_fade_start_fade = false;
 
 party_dir = -1;
 
-depth = -999;;
+depth = -999;
