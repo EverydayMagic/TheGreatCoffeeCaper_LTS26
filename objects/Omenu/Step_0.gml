@@ -1,10 +1,10 @@
-keyPause = keyboard_check_pressed(vk_shift);
-keyUp = keyboard_check_pressed(vk_up);
-keyLeft = keyboard_check_pressed(vk_left);
-keyRight = keyboard_check_pressed(vk_right);
-keyDown = keyboard_check_pressed(vk_down);
-keySelect = keyboard_check_pressed(ord("Z"));
-keyBack = keyboard_check_pressed(ord("X"));
+keyPause = InputPressed(INPUT_VERB.PAUSE);
+keyUp = InputPressed(INPUT_VERB.UP);
+keyDown = InputPressed(INPUT_VERB.DOWN);
+keyLeft = InputPressed(INPUT_VERB.LEFT);
+keyRight = InputPressed(INPUT_VERB.RIGHT);
+keySelect = InputPressed(INPUT_VERB.SELECT);
+keyBack = InputPressed(INPUT_VERB.BACK);
 
 depth = -room_height - 100; //always above stuff except text boxes
 //show_debug_message("menu depth: " + string(depth));
