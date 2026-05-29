@@ -119,7 +119,7 @@ if (Omenu.visible != true)
 		ibox_timer = 1;
 	}
 
-	if (keyboard_check_pressed(ord("Z")) && !instance_exists(Otextbox) && !instance_exists(_ibox) && ibox_timer = 0)
+	if (InputPressed(INPUT_VERB.SELECT) && !instance_exists(Otextbox) && !instance_exists(_ibox) && ibox_timer = 0)
 	{
 		ibox_create = true;	
 	} else {

@@ -10,6 +10,7 @@ function __InputConfigVerbs()
 		BACK,
 		ITEM,
 		PAUSE,
+		ANYKEY,
 	}
 	
 	InputDefineVerb(INPUT_VERB.LEFT, "left", vk_left, [-gp_axislh, gp_padl]);
@@ -20,6 +21,7 @@ function __InputConfigVerbs()
 	InputDefineVerb(INPUT_VERB.BACK, "back", ord("X"), gp_face2);
 	InputDefineVerb(INPUT_VERB.ITEM, "item", ord("C"), gp_face3);
 	InputDefineVerb(INPUT_VERB.PAUSE, "pause", vk_shift, gp_select);
+	//InputDefineVerb(INPUT_VERB.ANYKEY, "anykey", vk_anykey, )
 	
     //enum INPUT_VERB
     //{
