@@ -379,7 +379,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2026.0.0.15",
+    "IDEVersion":"2026.0.0.16",
   },
   "name":"TheGreatCoffeeCaper_LTS",
   "resources":[
@@ -396,7 +396,6 @@
     {"id":{"name":"font_dpcomic","path":"fonts/font_dpcomic/font_dpcomic.yy",},},
     {"id":{"name":"font_fancy","path":"fonts/font_fancy/font_fancy.yy",},},
     {"id":{"name":"font_karmaticarcade","path":"fonts/font_karmaticarcade/font_karmaticarcade.yy",},},
-    {"id":{"name":"font_main","path":"fonts/font_main/font_main.yy",},},
     {"id":{"name":"__InputUpdateController","path":"objects/__InputUpdateController/__InputUpdateController.yy",},},
     {"id":{"name":"Oact1scene1_dontleavehouse","path":"objects/Oact1scene1_dontleavehouse/Oact1scene1_dontleavehouse.yy",},},
     {"id":{"name":"Oaudio_manager","path":"objects/Oaudio_manager/Oaudio_manager.yy",},},
@@ -1383,6 +1382,7 @@
     {"id":{"name":"Sfence","path":"sprites/Sfence/Sfence.yy",},},
     {"id":{"name":"Sflash","path":"sprites/Sflash/Sflash.yy",},},
     {"id":{"name":"Sfont_ffl","path":"sprites/Sfont_ffl/Sfont_ffl.yy",},},
+    {"id":{"name":"Sfont_onetimenpb","path":"sprites/Sfont_onetimenpb/Sfont_onetimenpb.yy",},},
     {"id":{"name":"Sfox_lean","path":"sprites/Sfox_lean/Sfox_lean.yy",},},
     {"id":{"name":"Sfroghome","path":"sprites/Sfroghome/Sfroghome.yy",},},
     {"id":{"name":"Sfrogpiano","path":"sprites/Sfrogpiano/Sfrogpiano.yy",},},

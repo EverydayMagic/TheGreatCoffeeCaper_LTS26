@@ -10,12 +10,10 @@ old_depth = depth;
 up_depth = false;
 touchhoots = false;
 
-depthcheck_delay = 1;
-
-cut_fadebox_alpha = 1;
-
 moveOrder = 0;
 holdTime = 0;
+
+waitforinput = true;
 
 idle_spr = Scmouse_idle;
 walk_l_spr = Scmouse_walkl;

@@ -1,6 +1,6 @@
 {
   "$GMFont":"",
-  "%Name":"font_name",
+  "%Name":"font_dpcomic",
   "AntiAlias":0,
   "applyKerning":0,
   "ascender":12,
@@ -107,7 +107,7 @@
     "124":{"character":124,"h":16,"offset":0,"shift":3,"w":2,"x":212,"y":2,},
     "125":{"character":125,"h":16,"offset":0,"shift":5,"w":4,"x":206,"y":2,},
     "126":{"character":126,"h":16,"offset":0,"shift":7,"w":6,"x":10,"y":56,},
-    "9647":{"character":9647,"h":16,"offset":3,"shift":10,"w":4,"x":18,"y":56,},
+    "9647":{"character":9647,"h":16,"offset":2,"shift":8,"w":3,"x":18,"y":56,},
   },
   "hinting":0,
   "includeTTF":false,
@@ -117,7 +117,7 @@
   "last":0,
   "lineHeight":16,
   "maintainGms1Font":false,
-  "name":"font_name",
+  "name":"font_dpcomic",
   "parent":{
     "name":"Fonts",
     "path":"folders/Fonts.yy",

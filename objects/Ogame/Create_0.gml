@@ -8,7 +8,7 @@ global.playerWalk = Splayer_walk;
 player_spr_inuse = 0;
 player_imgindex_inuse = 0;
 
-global.font_classic = font_main;
+global.font_classic = font_add_sprite(Sfont_onetimenpb, 32, true, 1);
 global.font_name = font_dpcomic;
 global.font_tiny = font_6px;
 global.font_ffl = font_add_sprite(Sfont_ffl, 32, true, 1);  

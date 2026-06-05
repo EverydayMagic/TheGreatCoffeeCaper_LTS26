@@ -74,6 +74,7 @@ function trojandeerconfront_text(_text_id){
 			Text("Nearly as puzzling as the mysteries he solves!", "Hoots Regular");
 			Text("And love is the greatest mystery of them all...", "Hoots Regular");
 			Text("Let's just go inside...", "Charlie FacePalm");
+			add_move_order();
 		break;
 		
 	}

@@ -468,9 +468,79 @@ function cut_trojandeerconfront(){
 				Ostump.visible = false;
 				add_move_order();
 			}
-		},	
+		},
+		[ hold, [hoots, 15, "frm"] ],
+		[ costume_change, [trojandeer, Strojandeer_open, "noloop"] ],
+		[ hold, [hoots, 5, "frm"] ],
 		function(){
+			Ocharliemouse_cutscene.x = 11;
+			Ocharliemouse_cutscene.y = 61;
+			Ocharliemouse_cutscene.sprite_index = Scmouse_idle;
+			Ocharliemouse_cutscene.image_index = 3;
+			Ocharliemouse_cutscene.visible = true;
+			Ocharliemouse_cutscene.depth_manual = true;
+			Ocharliemouse_cutscene.depth = Otrojandeer.depth - 10;
+			add_move_order();
+		},
+		function(){
+			if (!instance_exists(Opath_arc))
+			{
+				var _x = Ocharliemouse_cutscene.x;
+				var _y = Ocharliemouse_cutscene.y;
 				
+				//PATH ARC
+				with (instance_create_depth(0, 0, 0, Opath_arc))
+				{
+					curving = true;
+					x1 = _x;
+					y1 = _y;
+					x2 = _x;
+					y2 = 84;
+					curve_height = 72;
+					max_points_per_side = 15;
+					obj = Ocharliemouse_cutscene;
+					spd = 4;
+				}	
+			}
+		},
+		[ hold, [hoots, 5, "frm"] ],
+		function(){
+			if (!instance_exists(Omulti_goto))
+			{
+				Otrojandeer.depth_manual = true;
+				Otrojandeer.depth = -y - 13;
+				
+				var _x = Otrojandeer.x;
+				var _y = Otrojandeer.y;
+				
+				with (instance_create_depth(0, 0, 0, Omulti_goto))
+				{
+					object = Otrojandeer;
+					origin_x = _x;
+					origin_y = _y;
+					x_pos = [116, 116, 161];
+					y_pos = [71, 108, 108];
+					spd = 1;
+					spr_list = [Strojandeer_roll_r, Strojandeer_roll_d, Strojandeer_roll_r];
+				}	
+			} else add_move_order();
+		},
+		[ costume_change, [charlie, Scmouse_idle, 1] ],
+		[ hold, [charlie, 15, "frm"] ],
+		[ create_textbox, ["justasplanned", charlie, true] ],
+		function(){
+			if (instance_exists(Omulti_goto))
+			{
+				Otrojandeer.depth = -y - 13;
+				Ocharliemouse_cutscene.depth_manual = false;
+				if (Otrojandeer.x = 161 && Otrojandeer.y = 108)
+				{
+					while (instance_exists(Omulti_goto)){ instance_destroy(Omulti_goto); }
+					instance_destroy(Otrojandeer);
+				}
+			} else if (!instance_exists(Otextbox)) {
+				add_move_order();	
+			}
 		},
 		
 	]

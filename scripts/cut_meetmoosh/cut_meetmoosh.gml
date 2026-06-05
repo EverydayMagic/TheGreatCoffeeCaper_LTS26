@@ -192,6 +192,8 @@ function cut_meetmoosh(){
 					start_cutdebug = false;		
 				}
 			}
+			
+			Opartypoint_manager.reset_points();
 		}
 			
 	}

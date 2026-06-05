@@ -17,7 +17,7 @@ if (instance_exists(_player) && !global.cutsceneActive)
 {
 	if (instance_exists(Opartypoint))
 	{
-		if (!instance_exists(Ofade))
+		if (!instance_exists(Ofade) && !waitforinput)
 		{
 			//move towards party point
 			goTo_partypoint();
@@ -28,7 +28,12 @@ if (instance_exists(_player) && !global.cutsceneActive)
 	partypoint_changespr();
 	
 	//if there is an iris transition, change sprite and pos accordingly
-	partypoint_irischange()
+	partypoint_irischange();
+}
+
+if (waitforinput)
+{
+	if (InputPressed(INPUT_VERB.ANYMOVE)){ waitforinput = false; }
 }
 
 //show_debug_message("Mouse VIS: " + string(visible));
