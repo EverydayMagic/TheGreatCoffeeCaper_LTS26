@@ -1,3 +1,5 @@
+//item_add(global.item_list.hammer);
+
 keyUp = InputCheck(INPUT_VERB.UP);
 keyDown = InputCheck(INPUT_VERB.DOWN);
 keyLeft = InputCheck(INPUT_VERB.LEFT);
@@ -46,9 +48,9 @@ if (!hoots_sleep)
 	//}
 }
 	
-if (!hoots_sleep)
+if (!hoots_sleep && !state_manual)
 {
-	if (instance_exists(Otextbox) || instance_exists(Ofade) || global.gamePaused = true || global.cutsceneActive = true || global.battleActive = true || Ocluehunt.beating = true || global.itemAdding = true || hoots_push)
+	if (instance_exists(Otextbox) || instance_exists(Ofade) || global.gamePaused = true || global.cutsceneActive = true || global.battleActive = true || Ocluehunt.beating = true || global.itemAdding = true || hoots_push || !visible)
 		state = PlayerStateLocked;
 	else
 		state = PlayerStateFree;
@@ -264,6 +266,89 @@ if ((instance_exists(Ointeractbox) || hoots_push) && !instance_exists(Otextbox))
 		ds_list_clear(pushblock_list); 
 		closest_block = 0;
 		closest_dist = 999;
+	}
+}
+
+//fall down pushblock hole
+var _hole = instance_place(x, y, Opushblock_hole);
+show_debug_message("close: " + string(closest_hole));
+if (instance_exists(_hole))
+{
+	//if we're close to two holes
+	if (ds_list_size(pushblock_hole_list) <= 0)
+	{
+		instance_place_list(x, y, Opushblock_hole, pushblock_hole_list, false);
+			
+		//manually order the list based on center of block rather than top corner
+		closest_hole = pushblock_hole_list[| 0];
+		closest_hole_dist = 999;
+		for (var p = 0; p < ds_list_size(pushblock_hole_list); p++)
+		{
+			var _pbhole = pushblock_hole_list[| p];
+			var _dist = 0;
+			with (_pbhole)
+			{
+				_dist = point_distance(_hole.x + 8, _hole.y + 8, x, y);
+			}
+		    if (_dist < closest_hole_dist)
+		    {
+		        closest_hole_dist = _dist;
+		        closest_hole = _pbhole;
+		    }	
+		}
+	}
+	
+	//close to hole
+	if (distance_to_point(closest_hole.x + 8, closest_hole.y + 8) < 8 && distance_to_point(closest_hole.x + 8, closest_hole.y + 8) > 1 && !closest_hole.full)
+	{
+		if (!instance_exists(Osweatbeads))
+		{
+			with (instance_create_depth(x, y - (sprite_height - 4), depth - 4, Osweatbeads))
+			{
+				char_track = Oplayer;
+				h_mod = 4;
+				player_depth = true;
+			}
+		}
+	} else if (distance_to_point(closest_hole.x + 8, closest_hole.y + 8) != 1){
+		if (instance_exists(Osweatbeads)){ instance_destroy(Osweatbeads); }	
+	}
+	if (place_meeting(x, y, closest_hole) && !closest_hole.full && distance_to_point(closest_hole.x + 8, closest_hole.y + 8) <= 2)
+	{
+		if (instance_exists(Osweatbeads)){ instance_destroy(Osweatbeads); }
+		visible = false;
+		sprite_index = Splayer_capidle;
+		closest_hole.full = true;
+		closest_hole.full_by = Oplayer;
+		if (ds_exists(pushblock_hole_list, ds_type_list))
+		{ 
+			ds_list_clear(pushblock_hole_list); 
+			closest_hole = 0;
+			closest_hole_dist = 999;
+		}
+	}
+}
+if (instance_exists(_hole) && !global.cutsceneActive)
+{
+	if (distance_to_point(_hole.x + 8, _hole.y + 8) >= 8)
+	{
+		if (instance_exists(Osweatbeads)){ instance_destroy(Osweatbeads); }
+		if (ds_exists(pushblock_hole_list, ds_type_list))
+		{ 
+			ds_list_clear(pushblock_hole_list); 
+			closest_hole = 0;
+			closest_hole_dist = 999;
+		}
+	}
+}
+if (!instance_exists(_hole) && instance_exists(Opushblock_hole))
+{
+	if (instance_exists(Osweatbeads)){ instance_destroy(Osweatbeads); }	
+	if (ds_exists(pushblock_hole_list, ds_type_list))
+	{ 
+		ds_list_clear(pushblock_hole_list); 
+		closest_hole = 0;
+		closest_hole_dist = 999;
 	}
 }
 

@@ -11,7 +11,7 @@ if (global.cutsceneActive && global.story_beat = STORY_PACE.TROJAN_DEER_CONFRONT
 	ex_cutscene("Trojan Deer Confront");
 }
 
-if (global.cutsceneActive || instance_exists(Ofade)){ exit; }
+if (global.cutsceneActive || instance_exists(Ofade) || instance_exists(Omulti_goto)){ exit; }
 
 if (!moving)
 {
@@ -98,9 +98,21 @@ if (xspd = 0 && yspd = 0)
 	}
 }
 
-if (instance_exists(Oplayer))
+if (instance_exists(Oplayer) && global.story_beat != STORY_PACE.TROJAN_DEER_CONFRONT)
 {
 	instance_deactivate_object(Oplayer);	
+}
+if (global.story_beat = STORY_PACE.TROJAN_DEER_CONFRONT)
+{
+	if (instance_exists(Omulti_goto))
+	{
+		depth = -y - 13;
+		if (x >= 161 && y = 108)
+		{
+			while (instance_exists(Omulti_goto)){ instance_destroy(Omulti_goto); }
+			instance_destroy();
+		}
+	}
 }
 
 

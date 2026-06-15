@@ -167,7 +167,6 @@ function cut_meetmoosh(){
 		//Uncomment this once cutscene is finished!//
 		/////////////////////////////////////////////
 			
-			
 		//erase the array for the next cutscene 
 		//and tell the game we finished with this one
 		if (!instance_exists(Otextbox))
@@ -175,13 +174,8 @@ function cut_meetmoosh(){
 			array_delete(global.moveOrder, 0, global.moveOrder_beat - 1);
 			global.moveOrder_beat = 0;
 			global.cutsceneActive = false;
-						
-			global.saveslot_story[global.saveslot][STORY_PACE.MEET_MOOSH] = 1;
 			
-			if (instance_exists(Ocharliemouse_cutscene))
-			{
-				Ocharliemouse_cutscene.alarm[0] = 1;
-			}
+			global.saveslot_story[global.saveslot][STORY_PACE.MEET_MOOSH] = 1;
 			
 			if (global.debugActive)
 			{
@@ -192,10 +186,10 @@ function cut_meetmoosh(){
 					start_cutdebug = false;		
 				}
 			}
-			
+
 			Opartypoint_manager.reset_points();
+	
 		}
-			
 	}
 		
 	//show_debug_message("array_length: " + string(array_length(global.moveOrder)));	

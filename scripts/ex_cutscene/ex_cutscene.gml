@@ -93,6 +93,9 @@ function ex_cutscene(_cut_id){
 		case "Trojan Deer Confront":
 			cut_trojandeerconfront();
 		break;
+		case "Confront In Sniff House":
+			cut_confrontinsniffhouse();
+		break;
 
 
 		default:

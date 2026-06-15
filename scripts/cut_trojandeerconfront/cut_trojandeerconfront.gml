@@ -265,7 +265,7 @@ function cut_trojandeerconfront(){
 		},
 		[ hold, [hoots, 35, "frm"] ],
 		[ costume_change, [hoots, Splayer_capwalk_l] ],
-		[ goTo, [hoots, 24, 53, 8, 47, 1] ],
+		[ goTo, [hoots, 24, 53, 8, 49, 1] ],
 		[ costume_change, [hoots, Splayer_treehug] ],
 		[ hold, [hoots, 15, "frm"] ],
 		[ create_textbox, ["ohstumpy", hoots, true] ],
@@ -509,6 +509,8 @@ function cut_trojandeerconfront(){
 			{
 				Otrojandeer.depth_manual = true;
 				Otrojandeer.depth = -y - 13;
+				Ocharliemouse_cutscene.depth_manual = true;
+				Ocharliemouse_cutscene.depth = Otrojandeer.depth - 1;
 				
 				var _x = Otrojandeer.x;
 				var _y = Otrojandeer.y;
@@ -529,17 +531,23 @@ function cut_trojandeerconfront(){
 		[ hold, [charlie, 15, "frm"] ],
 		[ create_textbox, ["justasplanned", charlie, true] ],
 		function(){
-			if (instance_exists(Omulti_goto))
+			if (!instance_exists(Otextbox)) 
 			{
-				Otrojandeer.depth = -y - 13;
-				Ocharliemouse_cutscene.depth_manual = false;
-				if (Otrojandeer.x = 161 && Otrojandeer.y = 108)
-				{
-					while (instance_exists(Omulti_goto)){ instance_destroy(Omulti_goto); }
-					instance_destroy(Otrojandeer);
-				}
-			} else if (!instance_exists(Otextbox)) {
-				add_move_order();	
+					Ocharliemouse_cutscene.depth_manual = false;
+					Ocharliemouse_cutscene.sprite_index = Scmouse_idle;
+					Ocharliemouse_cutscene.image_index = 1;
+					
+					//create warp block for sniffles house
+					with (instance_create_layer(15, 41, "Instances", Owarp_block))
+					{
+						image_xscale = 2.25;
+						target_x = 80;
+						target_y = 125;
+						dest = Rsnifflehouse;
+						trans_type = "iris";
+					}
+					
+					add_move_order();
 			}
 		},
 		
@@ -557,36 +565,11 @@ function cut_trojandeerconfront(){
 		/////////////////////////////////////////////
 		//Uncomment this once cutscene is finished!//
 		/////////////////////////////////////////////
-			
-			
-		//erase the array for the next cutscene 
-		//and tell the game we finished with this one
-		if (!instance_exists(Otextbox))
-		{
-			array_delete(global.moveOrder, 0, global.moveOrder_beat - 1);
-			global.moveOrder_beat = 0;
-			global.cutsceneActive = false;
-			
-			global.saveslot_story[global.saveslot][global.story_beat] = 1;
+		Ocharliemouse_cutscene.alarm[0] = 1;	
+		//do this because Oplayer currently doesn't exist cause of trojan deer sequence
+		instance_create_depth(Ohoots_cutscene.x, Ohoots_cutscene.y, Ohoots_cutscene.depth, Oplayer);
 		
-			if (instance_exists(Ocharliemouse_cutscene))
-			{
-				instance_destroy(Ocmouse_openupbb_cutcheck);
-				Ocharliemouse_cutscene.alarm[0] = 1;
-				
-			}
-		
-			if (global.debugActive)
-			{
-				with (Odirector)
-				{
-					sbeat_debug = false;
-					sbeat_input = "";
-					start_cutdebug = false;		
-				}
-			}
-		}
-			
+		end_scene();
 	}
 		
 	//show_debug_message("array_length: " + string(array_length(global.moveOrder)));	

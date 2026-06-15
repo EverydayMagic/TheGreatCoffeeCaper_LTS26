@@ -1,3 +1,4 @@
+visible = false; //until it gets set
 char_track = noone;
 bubble_type = 0;
 h_mod = 2;

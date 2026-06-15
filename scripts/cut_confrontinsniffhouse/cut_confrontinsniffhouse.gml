@@ -1,0 +1,3 @@
+function cut_confrontinsniffhouse(){
+
+}

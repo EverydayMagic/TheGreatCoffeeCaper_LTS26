@@ -23,14 +23,8 @@ temp = false;
 
 uniform_handle = shader_get_uniform(SHDwhiteoutline, "texture_pixel");
 
-if (sprite_index = Schair || sprite_index = Sbroken_chair)
-{
-	var _parent = self.id;
-	with (instance_create_depth(x, y, depth, Oblankfloor))
-	{
-		parent = _parent;	
-	}
-}
+alarm[0] = 1;
+
 
 
 

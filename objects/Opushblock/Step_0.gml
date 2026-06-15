@@ -63,7 +63,7 @@
 			xspd = 0;
 			yspd = 0;
 		}
-
+		
 	}
 
 //move
@@ -77,6 +77,14 @@ if (!instance_exists(Ofade) && !global.gamePaused)
 if (xspd = 0 && yspd = 0)
 {
 	sliding = false;	
+}
+
+//fall if over hole
+var _hole = instance_place(x, y, Opushblock_hole);
+if (!sliding && instance_exists(_hole))
+{
+	_hole.full = true;
+	_hole.full_by = id;
 }
 
 //instructions when interacted with

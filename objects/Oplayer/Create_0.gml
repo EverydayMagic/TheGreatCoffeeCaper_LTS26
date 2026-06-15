@@ -1,6 +1,6 @@
 
-
 state = PlayerStateFree;
+state_manual = false;
 
 collisionMap = layer_tilemap_get_id(layer_get_id("Col"));
 
@@ -26,6 +26,8 @@ tree_id = noone;
 room_in = room;
 
 in_trojan_deer = true;
+
+invincible_blink = 0;
 
 //For Character Following
 array_size = 50; //the amount of positions to record
@@ -61,5 +63,8 @@ beat_time_length = 0;
 pushblock_list = ds_list_create();
 closest_block = 0;
 closest_dist = 999;
+pushblock_hole_list = ds_list_create();
+closest_hole = 0;
+closest_hole_dist = 999;
 
 if (Oitem_manager.inv[0] = global.item_list.detective_hat){ global.playerIdle = Splayer_capidle; global.playerWalk = Splayer_capwalk; }

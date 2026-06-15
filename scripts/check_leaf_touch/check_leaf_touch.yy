@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"check_leaf_touch",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"check_leaf_touch",
+  "parent":{
+    "name":"Other",
+    "path":"folders/Scripts/Other.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

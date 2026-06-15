@@ -34,17 +34,3 @@ depth = -80;
 //create hit collision
 //if (!instance_exists(Omglass_hit_col))
 //	instance_create_layer(x, y, "Instances", Omglass_hit_col);
-
-//image index
-switch (Ocluebattle_manager.background)
-{
-	case Sbattlebg_grass:
-		image_index = 1;
-	break;
-	
-	case Sbattlebg_wood:
-		image_index = 2;
-	break;
-	
-	default: image_index = 0; break;
-}

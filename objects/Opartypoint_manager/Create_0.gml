@@ -34,5 +34,15 @@ reset_points = function(){
 			pos_y[i] = _player.y;
 		}
 	}
+	if (instance_exists(_player) && !instance_exists(Opartypoint))
+	{
+		for (var s = 0; s < party_size; s++)
+		{
+			with (instance_create_depth(x, y, depth, Opartypoint))
+			{
+				record = 20 * (s + 1);	
+			}
+		}
+	}
 }
 
