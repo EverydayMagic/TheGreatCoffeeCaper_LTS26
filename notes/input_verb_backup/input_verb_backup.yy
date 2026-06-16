@@ -1,0 +1,11 @@
+{
+  "$GMNotes":"v1",
+  "%Name":"input_verb_backup",
+  "name":"input_verb_backup",
+  "parent":{
+    "name":"Notes",
+    "path":"folders/Notes.yy",
+  },
+  "resourceType":"GMNotes",
+  "resourceVersion":"2.0",
+}

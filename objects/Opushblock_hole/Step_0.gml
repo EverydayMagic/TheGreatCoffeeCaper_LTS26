@@ -57,6 +57,6 @@ if (full_by != noone && !_canfill)
 if (image_index != 0)
 {
 	if (full_by != Oplayer){ instance_destroy(full_by); }
-	if (full_by = Oplayer){ 
+	//if (full_by = Oplayer){ 
 	full_by = noone;
 }
