@@ -28,8 +28,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"Idle",
-    "path":"folders/Sprites/Character Models/Puffy/Idle.yy",
+    "name":"Smile",
+    "path":"folders/Sprites/Character Models/Puffy/Idle/Smile.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

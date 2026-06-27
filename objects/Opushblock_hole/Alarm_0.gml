@@ -13,6 +13,7 @@ if (instance_exists(Opartypoint))
 }
 Oplayer.visible = true;
 Oplayer.state = PlayerStateFree;
+Oplayer.state_manual = false;
 Opartypoint_manager.reset_points();
 with (Opushblock_hole){ alarm[1] = 15; }
 Oplayer.alarm[2] = 1;

@@ -177,6 +177,13 @@ function get_scene_cast(_scene_num){
 			global.scene_cast[1] = stump;
 		break;
 		
+		case STORY_PACE.CONFRONT_IN_SNIFF_HOUSE:
+			global.scene_cast[0] = hootsworth;
+			global.scene_cast[1] = charlie;
+			global.scene_cast[2] = puffy;
+			global.scene_cast[3] = sniffles;
+		break;
+		
 		
 		default: show_error("CUTSCENE NUMBER DOES NOT EXIST", true);
 	}

@@ -272,6 +272,7 @@ if ((instance_exists(Ointeractbox) || hoots_push) && !instance_exists(Otextbox))
 //fall down pushblock hole
 var _hole = instance_place(x, y, Opushblock_hole);
 show_debug_message("close: " + string(closest_hole));
+/*
 if (instance_exists(_hole))
 {
 	//if we're close to two holes
@@ -298,7 +299,7 @@ if (instance_exists(_hole))
 		}
 	}
 	
-	//close to hole
+	//close to hole sweat beads
 	if (distance_to_point(closest_hole.x + 8, closest_hole.y + 8) < 8 && distance_to_point(closest_hole.x + 8, closest_hole.y + 8) > 1 && !closest_hole.full)
 	{
 		if (!instance_exists(Osweatbeads))
@@ -310,24 +311,49 @@ if (instance_exists(_hole))
 				player_depth = true;
 			}
 		}
-	} else if (distance_to_point(closest_hole.x + 8, closest_hole.y + 8) != 1){
+	} else if (distance_to_point(closest_hole.x + 8, closest_hole.y + 8) < 1){
 		if (instance_exists(Osweatbeads)){ instance_destroy(Osweatbeads); }	
 	}
-	if (place_meeting(x, y, closest_hole) && !closest_hole.full && distance_to_point(closest_hole.x + 8, closest_hole.y + 8) <= 2)
+	
+	if (place_meeting(x, y, closest_hole) && !closest_hole.full)
 	{
+		state_manual = true;
+		state = PlayerStateLocked;
 		if (instance_exists(Osweatbeads)){ instance_destroy(Osweatbeads); }
-		visible = false;
-		sprite_index = Splayer_capidle;
-		closest_hole.full = true;
-		closest_hole.full_by = Oplayer;
-		if (ds_exists(pushblock_hole_list, ds_type_list))
-		{ 
-			ds_list_clear(pushblock_hole_list); 
-			closest_hole = 0;
-			closest_hole_dist = 999;
+		sprite_index = Splayer_holefall;
+		//move towards hole
+		if (!instance_exists(Omulti_goto))
+		{
+			var _x = x;
+			var _y = y;
+			var _ch = closest_hole
+			with (instance_create_depth(0, 0, 0, Omulti_goto))
+			{
+				object = Oplayer;
+				origin_x = _x;
+				origin_y = _y;
+				x_pos = [_ch.x + 8];
+				y_pos = [_ch.y + 11];
+				spd = 2;
+			}
+		} else if (x = closest_hole.x + 8 && y = closest_hole.y + 11) {
+			while (instance_exists(Omulti_goto)){ instance_destroy(Omulti_goto); }
+			
+			//now actually fall
+			visible = false;
+			sprite_index = Splayer_capidle;
+			closest_hole.full = true;
+			closest_hole.full_by = Oplayer;
+			if (ds_exists(pushblock_hole_list, ds_type_list))
+			{ 
+				ds_list_clear(pushblock_hole_list); 
+				closest_hole = 0;
+				closest_hole_dist = 999;
+			}
 		}
 	}
 }
+*/
 if (instance_exists(_hole) && !global.cutsceneActive)
 {
 	if (distance_to_point(_hole.x + 8, _hole.y + 8) >= 8)

@@ -80,7 +80,6 @@ if (!global.cutsceneActive && instance_exists(_player))
 			global.transitioning = true;
 			
 			warp = instance_create_depth(x, y, depth -999, Ofade);
-		
 			warp.newY = target_y;
 			warp.newX = target_x;
 			warp.newRoom = dest;

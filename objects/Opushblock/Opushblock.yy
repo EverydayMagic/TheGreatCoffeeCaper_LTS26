@@ -11,8 +11,8 @@
   "name":"Opushblock",
   "overriddenProperties":[],
   "parent":{
-    "name":"Rooms",
-    "path":"folders/Objects/Rooms.yy",
+    "name":"Puzzle",
+    "path":"folders/Objects/Rooms/Puzzle.yy",
   },
   "parentObjectId":{
     "name":"Ocol",

@@ -470,6 +470,7 @@ function cut_trojandeerconfront(){
 			}
 		},
 		[ hold, [hoots, 15, "frm"] ],
+		[ costume_change, [hoots, Splayer_capidle, 3] ],
 		[ costume_change, [trojandeer, Strojandeer_open, "noloop"] ],
 		[ hold, [hoots, 5, "frm"] ],
 		function(){
@@ -500,10 +501,34 @@ function cut_trojandeerconfront(){
 					max_points_per_side = 15;
 					obj = Ocharliemouse_cutscene;
 					spd = 4;
-				}	
+				}
+				
+				var _xx = Ohoots_cutscene.x;
+				var _yy = Ohoots_cutscene.y;
+				
+				//Hoots move forward
+				with (instance_create_depth(0, 0, 0, Omulti_goto))
+				{
+					object = Ohoots_cutscene;
+					origin_x = _xx;
+					origin_y = _yy;
+					x_pos = [8];
+					y_pos = [57];
+					spd = 1;
+					spr_list = [Splayer_capwalk_d];	
+					spr_done = Splayer_capidle;
+					img_done = 3;
+				}
 			}
 		},
 		[ hold, [hoots, 5, "frm"] ],
+		function(){
+			if (Ohoots_cutscene.x = 8 && Ohoots_cutscene.y = 57)
+			{
+				while(instance_exists(Omulti_goto)){ instance_destroy(Omulti_goto); }
+				add_move_order();
+			}
+		},
 		function(){
 			if (!instance_exists(Omulti_goto))
 			{

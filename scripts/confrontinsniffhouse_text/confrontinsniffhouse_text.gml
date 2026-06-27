@@ -2,14 +2,19 @@ function confrontinsniffhouse_text(_text_id){
 	switch (_text_id)
 	{
 		case "notovahhere":
-			Text("Not ovah here...&Not ovah there...", "Puffy Irritated");
+			Text("Not over here...&Not over there...", "Puffy Irritated");
+				talk_turn(Opuffy, Spuffy_sidetalk_nosmile, -1, true);
+				talk_turn(Opuffy, Spuffy_sidetalk_nosmile, -1, false, 16);
 				pause(16, 16, 5);
-			Text("Goodness!&Where in da fowest are does beans?", "Puffy Angry");
-				pause(9, 9, 5);
+			Text("Goodness!", "Puffy Angry");
+				talk_turn(Opuffy, Spuffy_mad_f);
+			Text("Where in the fowest are those beans?", "Puffy Angry");
+			add_move_order();
 		break;
 		case "teardishouse":
-			Text("Oooo!&I'll tear dis house apart to find dem!", "Puffy Dark");
+			Text("Oooo!&I'll tear this house apart to find them!", "Puffy Dark");
 				pause(5, 5, 5);
+			add_move_order();
 		break;
 		case "stoprightthere":
 			Text("Stop right there you puffy fiend!", "Charlie Interrogative");
@@ -17,9 +22,10 @@ function confrontinsniffhouse_text(_text_id){
 			Text("Hey, where's Stump?", "Puffy NoSmile");
 				pause(4, 4, 3);
 			Text("He's -uh- preoccupied at the moment.", "Hoots Regular");
-			Text("Oh dat cwazy deer! He always messes up my pwans!", "Puffy Angry");
+			Text("Oh that cwazy deer! He always messes up my pwans!", "Puffy Angry");
 				pause(18, 18, 5);
-			Text("I'll just hafta steal someting else!", "Puffy Devious");
+			Text("I'll just have to steal someting else!", "Puffy Devious");
+			add_move_order();
 		break;
 		case "whatrelaxingwalk":
 			Text("What a relaxing walk!", "Sniffles Happy");
@@ -28,11 +34,11 @@ function confrontinsniffhouse_text(_text_id){
 				pause(4, 4, 5);
 		break;
 		case "datwooksimpor":
-			Text("Dat wooks important!", "Puffy Devious");
+			Text("That wooks important!", "Puffy Devious");
 				textspeed_change(0.25);
 		break;
 		case "seesuckahs":
-			Text("See ya suckahs!", "Puffy Regular");
+			Text("See ya suckers!", "Puffy Regular");
 		break;
 		case "myniece":
 			Text("My niece!&Come back here you-", "Sniffles CrazyYell");

@@ -28,7 +28,7 @@
 //holed
 if (holed)
 {
-	if (place_meeting(x, y, Oplayer) && point_distance(x + 8, y + 8, Oplayer.x, Oplayer.y) <= 2)
+	if (place_meeting(x, y, Ohootbox) && instance_exists(Oplayer))
 	{
 		//create hole
 		sprite_index = Spushblock_hole;

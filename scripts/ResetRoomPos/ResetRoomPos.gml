@@ -1,11 +1,14 @@
 function ResetRoomPos(){
+	var _x = -1;
+	var _y = -1;
+	
 	//housing
 	for (var h = 0; h < array_length(global.house_rooms); h++)
 	{
 		if (room = global.house_rooms[h])
 		{
-			x = 80;
-			y = 125;
+			_x = 80;
+			_y = 125;
 									
 			with (Opartypoint_manager)
 			{
@@ -29,8 +32,8 @@ function ResetRoomPos(){
 	{
 		if (room = global.special_house_rooms[sh])
 		{
-			x = 80;
-			y = 125;
+			_x = 80;
+			_y = 125;
 									
 			with (Opartypoint_manager)
 			{
@@ -53,10 +56,7 @@ function ResetRoomPos(){
 	for (var out = 0; out < array_length(global.outside_rooms); out++)
 	{
 		if (room = global.outside_rooms[out])
-		{
-			var _x = 0;
-			var _y = 0;
-								
+		{							
 			switch (room)
 			{
 				case Rneighborhood:
@@ -108,9 +108,6 @@ function ResetRoomPos(){
 					_y = 136;
 				break;
 			}
-								
-			x = _x;
-			y = _y;
 			
 			with (Opartypoint_manager)
 			{
@@ -128,4 +125,15 @@ function ResetRoomPos(){
 			}
 		}
 	}
+	
+	//default
+	if (_x = -1 && _y = -1)
+	{
+		_x = room_width/2;
+		_y = room_height/2;
+	}
+	
+	
+	x = _x;
+	y = _y;
 }

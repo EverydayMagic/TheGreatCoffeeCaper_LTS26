@@ -81,10 +81,28 @@ if (xspd = 0 && yspd = 0)
 
 //fall if over hole
 var _hole = instance_place(x, y, Opushblock_hole);
-if (!sliding && instance_exists(_hole))
+if (!sliding && instance_exists(_hole) && !_hole.full)
 {
 	_hole.full = true;
 	_hole.full_by = id;
+}
+
+//fall if over leaf hole
+var _leaf_tile = instance_place(x, y, Oleaf_tile);
+if (!sliding && instance_exists(_leaf_tile))
+{
+	if (_leaf_tile.holed)
+	{
+		with (_leaf_tile)
+		{
+			//create hole
+			sprite_index = Spushblock_hole;
+			image_index = 0;
+			Oplayer.state_manual = true;
+			Oplayer.state = PlayerStateLocked;
+			if (alarm[0] = -1){ alarm[0] = 10; }		
+		}
+	}
 }
 
 //instructions when interacted with

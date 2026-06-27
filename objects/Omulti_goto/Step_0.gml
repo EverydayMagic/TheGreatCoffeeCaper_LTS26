@@ -1,5 +1,47 @@
-if (object != noone && instance_exists(object) && !multi_goto_done)
+if (object != noone && instance_exists(object) && !multi_goto_done && pause_done)
 {
+	if (uphill_move)
+	{
+		//need to calc dists (calc is short for calculate)
+		if (array_length(dist_x) <= 0)
+		{
+			for (var b = 0; b < array_length(x_pos); b++)
+			{
+				if (b > 0)
+				{
+					array_push(dist_x, x_pos[b] - x_pos[b - 1]);
+					array_push(dist_y, y_pos[b] - y_pos[b - 1]);
+				} else {
+					array_push(dist_x, x_pos[0] - origin_x);
+					array_push(dist_y, origin_y - y_pos[0]);
+				}
+			}
+		}
+		
+		if (percent < 1)
+		{
+			percent += spd/FRAME_RATE;
+			position = animcurve_channel_evaluate(anim_curve, percent);
+			
+			if (object.x != x_pos[goto_track] && object.y != y_pos[goto_track])
+			{
+				if (goto_track = 0)
+				{
+					object.x = origin_x + (dist_x[goto_track] * position);
+					object.y = origin_y + (dist_y[goto_track] * position);
+				} else {
+					object.x = dist_x[goto_track - 1] + (dist_x[goto_track] * position);
+					object.y = dist_y[goto_track - 1] + (dist_y[goto_track] * position);
+				}
+			}
+		} else {
+			percent = 0;
+			object.x = x_pos[goto_track];
+			object.y = y_pos[goto_track];
+			add_goto_track();
+		}
+	}
+	
 	//setting the sprite of the object
 	if (array_length(spr_list) > 0)
 	{
@@ -16,6 +58,8 @@ if (object != noone && instance_exists(object) && !multi_goto_done)
 		if (goto_track = hoots_track_start && instance_exists(Ohoots_cutscene))
 			Ohoots_cutscene.begin_record = true;
 	}
+	
+	if (uphill_move){ exit; }
 	
 	var _checkx = false;
 	var _checky = false;
