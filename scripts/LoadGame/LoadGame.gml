@@ -91,7 +91,7 @@ function load_game(){
 								sprite_index = asset_get_index(_loadData.instances[i].spr_index);
 								image_index = _loadData.instances[i].img_index;
 								depth = _loadData.instances[i].depth;
-								state = _loadData.instances[i]._state;
+								state = asset_get_index(_loadData.instances[i]._state);
 								direction =  _loadData.instances[i].direction;
 								visible = _loadData.instances[i].visible;
 							break;

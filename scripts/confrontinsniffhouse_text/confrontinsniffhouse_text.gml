@@ -18,57 +18,94 @@ function confrontinsniffhouse_text(_text_id){
 		break;
 		case "stoprightthere":
 			Text("Stop right there you puffy fiend!", "Charlie Interrogative");
+			add_move_order();
+		break;
+		case "youagainpuff":
 			Text("You again?!", "Puffy Distressed");
+				talk_turn(Opuffy, Spuffy_shocked_f);
 			Text("Hey, where's Stump?", "Puffy NoSmile");
+				talk_turn(Opuffy, Spuffy_idle_f_nosmi);
 				pause(4, 4, 3);
+			add_move_order();
+		break;
+		case "hespreoccu":
 			Text("He's -uh- preoccupied at the moment.", "Hoots Regular");
-			Text("Oh that cwazy deer! He always messes up my pwans!", "Puffy Angry");
-				pause(18, 18, 5);
+			add_move_order();
+		break;
+		case "hemessespwans":
+			Text("Oh that cwazy deer!", "Puffy Irritated");
+				talk_turn(Opuffy, Spuffy_mad_f);
+			Text("He always messes up my pwans!", "Puffy Angry");
+				talk_turn(Opuffy, Spuffy_mad2_f);
 			Text("I'll just have to steal someting else!", "Puffy Devious");
+				talk_turn(Opuffy, Spuffy_determined_f);
 			add_move_order();
 		break;
 		case "whatrelaxingwalk":
 			Text("What a relaxing walk!", "Sniffles Happy");
-			Text("I can't wait to come back to the tranquil peace of my home.", "Sniffles Happy");
+				talk_turn(Ocharliemouse_cutscene, Scmouse_idle, 1);
+				talk_turn(Ohoots_cutscene, Splayer_capidle, 1);
+			Text("I can't wait to come back to the peace of my home...", "Sniffles Happy");
+			add_move_order();
+		break;
+		case "doesntmatchnarration":
 			Text("Say, this scene doesn't match my narration!", "Sniffles Regular");
 				pause(4, 4, 5);
+			add_move_order();
 		break;
 		case "datwooksimpor":
 			Text("That wooks important!", "Puffy Devious");
-				textspeed_change(0.25);
+				talk_turn(Opuffy, Spuffy_determined_f);
+			add_move_order();
 		break;
 		case "seesuckahs":
 			Text("See ya suckers!", "Puffy Regular");
+			add_move_order();
 		break;
 		case "myniece":
 			Text("My niece!&Come back here you-", "Sniffles CrazyYell");
 				pause(9, 9, 5);
 			Text("uh-&ah-", "Sniffles CrazyYellEyeClosed");
+				talk_turn(Osniffles, Ssniffles_uhah);
 				pause(3,3, 10);
+			add_move_order();
+		break;
+		case "mynieceachoo":
 			Text("-ACHOOOOOO!", "Sniffles Achoo");
+				talk_turn(Osniffles, Ssniffles_achoo);
 				textspeed_change(2);
-				skip();
+				auto(5, true);
+			add_move_order();
 		break;
 		case "sinusesterrible":
 			Text("Goodness me...", "Sniffles Regular");
 			Text("My sinuses are just terrible in this autumn air...", "Sniffles Regular");
+				talk_turn(Ocharliemouse_cutscene, Scmouse_idle, 0);
 			Text("Detective...I don't know what you're doing here...", "Sniffles Regular");
 				pause(11, 11, 5);
 			Text("-But could you please rescue my niece?", "Sniffles Regular");
 			Text("Consider it done Sniffles!", "Charlie PumpedFist");
+				talk_turn(Ocharliemouse_cutscene, Scmouse_pumpfist);
 			Text("Thanks, um...", "Sniffles Regular");
+				talk_turn(Osniffles, Ssniffles_idle, 0, true);
 				pause(7, 7, 10);
 			Text("And you are...?", "Sniffles Regular");
 			Text("...&Charlie...", "Charlie Red");
+				talk_turn(Ocharliemouse_cutscene, Scmouse_embarrassed_red_side);
 				pause(3, 3, 15);
-			Text("I'm Charlie...", "Charlie Regular");
-				pause(3, 3, 10);
+			Text("I'm...&Charlie...", "Charlie Regular");
+				talk_turn(Ocharliemouse_cutscene, Scmouse_idle, 3);
+				pause(6, 6, 10);
+			add_move_order();
 		break;
 		case "letsmovecharlie":
-			Text("Come now, let's move Charlie!", "Hoots Happy");
+			Text("Come now, let's move Charlie!", "Hoots Regular");
 				pause(9, 9, 5);
-			Text("If we don't hurry, I might miss my mid-morning nap!", "Hoots Yawn");
+				talk_turn(Ohoots_cutscene, Splayer_capidle, 3);
+			Text("If we don't hurry, I might miss my mid-morning nap!", "Hoots Happy");
 				pause(18, 18, 5);
+				talk_turn(Ohoots_cutscene, Splayer_capidle, 2);
+			add_move_order();
 		break;
 	}
 }

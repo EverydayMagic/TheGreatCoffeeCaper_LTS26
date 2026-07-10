@@ -32,4 +32,8 @@ function CutsceneTextFind(_text_id){
 	trojandeerconfront_text(_text_id);
 	
 	confrontinsniffhouse_text(_text_id);
+	
+	outsidesniffhouse_text(_text_id);
+	
+	shownoah_text(_text_id);
 }

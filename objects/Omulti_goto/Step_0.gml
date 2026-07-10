@@ -13,7 +13,7 @@ if (object != noone && instance_exists(object) && !multi_goto_done && pause_done
 					array_push(dist_y, y_pos[b] - y_pos[b - 1]);
 				} else {
 					array_push(dist_x, x_pos[0] - origin_x);
-					array_push(dist_y, origin_y - y_pos[0]);
+					array_push(dist_y, y_pos[0] - origin_y);
 				}
 			}
 		}
@@ -23,17 +23,26 @@ if (object != noone && instance_exists(object) && !multi_goto_done && pause_done
 			percent += spd/FRAME_RATE;
 			position = animcurve_channel_evaluate(anim_curve, percent);
 			
-			if (object.x != x_pos[goto_track] && object.y != y_pos[goto_track])
-			{
-				if (goto_track = 0)
+			//x move
+				if (object.x != x_pos[goto_track])
 				{
-					object.x = origin_x + (dist_x[goto_track] * position);
-					object.y = origin_y + (dist_y[goto_track] * position);
-				} else {
-					object.x = dist_x[goto_track - 1] + (dist_x[goto_track] * position);
-					object.y = dist_y[goto_track - 1] + (dist_y[goto_track] * position);
+					if (goto_track = 0)
+					{
+						object.x = origin_x + (dist_x[goto_track] * position);
+					} else {
+						object.x = dist_x[goto_track - 1] + (dist_x[goto_track] * position);
+					}
 				}
-			}
+			//y move (cause you want to)
+				if (object.y != y_pos[goto_track])
+				{
+					if (goto_track = 0)
+					{
+						object.y = origin_y + (dist_y[goto_track] * position);	
+					} else {
+						object.y = dist_y[goto_track - 1] + (dist_y[goto_track] * position);
+					}
+				}
 		} else {
 			percent = 0;
 			object.x = x_pos[goto_track];

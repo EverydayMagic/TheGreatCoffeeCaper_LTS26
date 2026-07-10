@@ -1,4 +1,8 @@
 //MAKE SURE THE PARTY MEMBER HAS THE APPROPRIATE SPRITE VARIABLES IN CREATE EVENT
+//walk_r_spr
+//walk_d_spr
+//walk_u_spr
+//walk_l_spr
 
 function partypoint_changespr(){
 	

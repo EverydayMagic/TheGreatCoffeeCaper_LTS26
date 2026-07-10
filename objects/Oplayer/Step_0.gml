@@ -48,7 +48,7 @@ if (!hoots_sleep)
 	//}
 }
 	
-if (!hoots_sleep && !state_manual)
+if (!hoots_sleep && state != PlayerStateRun)
 {
 	if (instance_exists(Otextbox) || instance_exists(Ofade) || global.gamePaused = true || global.cutsceneActive = true || global.battleActive = true || Ocluehunt.beating = true || global.itemAdding = true || hoots_push || !visible)
 		state = PlayerStateLocked;
@@ -71,11 +71,9 @@ if (global.cutsceneActive = true)
 	}
 }
 
-
-
 script_execute(state);
 
-depth = -y;
+if (!depth_manual){ depth = -y; }
 
 //For Character Following
 var _pm = Opartypoint_manager;
@@ -135,44 +133,46 @@ if (Omenu.visible != true)
 
 
 //Sprinting
-//if (global.sprinting_unlocked)
-//{
-	//I'm gonna wait until the sprites are made :)
+if (global.sprinting_unlocked)
+{
+	//I'm gonna wait until the sprites are made :) jk loooooool
 	
-	/*	
+	
 	if (instance_exists(Ocharliemouse))
 	{
 		//make sure we are currently in hoots party
 		var _in_party = false;
 		for (var p = 0; p < array_length(global.player_party); p++)
 		{
-			if (global.player_party[p] = Ocharliemouse.id){ _in_party = true; }	
+			if (global.player_party[p] = Ocharliemouse){ _in_party = true; }	
 		}
 		
 		if (_in_party)
 		{
 			//check for keyboard input
-			if (keyboard_check(ord("Z")))
+			if (keyboard_check(ord("X")))
 			{
-				
+				state = PlayerStateRun;		
 			}
 		}
 	}
-	*/
-//}
+}
 
 //If Hootsworth Should Be Sleeping
-if (!keyboard_check_pressed(vk_anykey) && !keyboard_check(vk_anykey) && !global.cutsceneActive && !instance_exists(Otextbox) && !global.transitioning && !instance_exists(Oitem_reveal) && !global.itemAdding)
+if (state != PlayerStateRun)
 {
-	if (alarm[0] = -1){ alarm[0] = 300 * FRAME_RATE; }
-} else  {
-	alarm[0] = -1;
-	if (instance_exists(Omenu))
-		if (!Omenu.save_check && !global.itemAdding)
-			image_speed = 0;
-	hoots_sleep = false;
-	beat = 0;
-	beating = false;
+	if (!keyboard_check_pressed(vk_anykey) && !keyboard_check(vk_anykey) && !global.cutsceneActive && !instance_exists(Otextbox) && !global.transitioning && !instance_exists(Oitem_reveal) && !global.itemAdding)
+	{
+		if (alarm[0] = -1){ alarm[0] = 300 * FRAME_RATE; }
+	} else  {
+		alarm[0] = -1;
+		if (instance_exists(Omenu))
+			if (!Omenu.save_check && !global.itemAdding)
+				image_speed = 0;
+		hoots_sleep = false;
+		beat = 0;
+		beating = false;
+	}
 }
 
 //interact with push blocks
@@ -393,7 +393,8 @@ if (global.debugActive)
 
 room_in = room_get_name(room);
 //show_debug_message("CARDINAL DIR: " + string(CARDINAL_DIR));
-//show_debug_message("STATE: " + script_get_name(state));
+show_debug_message("STATE: " + script_get_name(state));
+show_debug_message("BEAT: " + string(beat));
 //show_debug_message("depth: " + string(depth));
 //show_debug_message("direction: " + string(direction));
 //show_debug_message("image_index: " + string(image_index));

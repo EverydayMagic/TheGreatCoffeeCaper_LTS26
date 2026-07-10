@@ -16,3 +16,5 @@ curving = false;
 spd = 1;
 
 cut_dontadd = false;
+
+destroy_afterward = false;

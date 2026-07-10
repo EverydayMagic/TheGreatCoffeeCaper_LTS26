@@ -1,3 +1,4 @@
+
 	draw_set_font(global.settings.font);
 		
 	//- - - - - - - draw the text box - - - - - - - -//
@@ -105,7 +106,6 @@
 			draw_sprite_ext(inline_spr[c, page], 0, (char_x[c, page] + _shake_x) * 2, (char_y[c, page] + _float_y + _shake_y) * 2, 2, 2, 0, c_white, 1);
 		}
 	}
-
 
 
 

@@ -7,6 +7,7 @@ spd = 0;
 spr_list = [];
 spr_done = -1;
 img_done = 0;
+img_spd_done = 0;
 pause_after_beat = -1;
 pause_done = true;
 uphill_move = false;
@@ -32,7 +33,7 @@ function add_goto_track(){
 	} else {
 		if (!loop_move)
 		{
-			object.image_speed = 0;
+			object.image_speed = img_spd_done;
 			if (spr_done != -1){ object.sprite_index = spr_done; object.image_index = img_done; }
 			if (!multi_goto_done)
 			{

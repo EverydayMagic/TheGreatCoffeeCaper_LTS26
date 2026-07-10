@@ -83,5 +83,17 @@ if (instance_exists(Opartypoint) && instance_exists(Ofade))
 	}	
 }
 
+//constantly update global.player_party
+if (instance_exists(Oplayer) && array_length(global.player_party) > 0)
+{
+	for (var p = 0; p < array_length(global.player_party); p++)
+	{
+		if (!instance_exists(global.player_party[p]))
+		{
+			array_delete(global.player_party, p, 1);
+		}
+	}
+}
+
 //show_debug_message("party points: " + string(instance_number(Opartypoint)));
 

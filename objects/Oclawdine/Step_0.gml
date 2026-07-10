@@ -23,5 +23,9 @@
 //show_debug_message("CLAWDINE DEPTH: " + string(depth));
 //if (instance_exists(Oplayer))
 //	show_debug_message("HOOTS DEPTH: " + string(Oplayer.depth));
+
+//goTo_partypoint();
+//partypoint_changespr();
+
 if (!depth_manual)
 	depth = -y;

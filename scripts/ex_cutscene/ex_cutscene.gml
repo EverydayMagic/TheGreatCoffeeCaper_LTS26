@@ -96,6 +96,12 @@ function ex_cutscene(_cut_id){
 		case "Confront In Sniff House":
 			cut_confrontinsniffhouse();
 		break;
+		case "Outside Sniff House":
+			cut_outsidesniffhouse();
+		break;
+		case "ShowNoah":
+			cut_shownoah();
+		break;
 
 
 		default:

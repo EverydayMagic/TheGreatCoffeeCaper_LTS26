@@ -11,7 +11,10 @@ if (instance_exists(Ofade))
 	if (Ofade.trans_type = "map")
 		_map_trans = true;
 
-if (!global.itemAdding && !_map_trans) //if we are adding an item, the camera is zooming in and we don't want this to affect it
+var _screenshake = false;
+with (Oscreenshake){ _screenshake = shake; }
+
+if (!global.itemAdding && !_map_trans && !_screenshake) //if we are adding an item, the camera is zooming in and we don't want this to affect it
 {
 	camera_set_view_size(VIEW, view_width, view_height);
 
@@ -29,13 +32,14 @@ if (!global.itemAdding && !_map_trans) //if we are adding an item, the camera is
 
 //show_debug_message("CAM POS: " + string(camera_get_view_x(VIEW)) + ", " + string(camera_get_view_y(VIEW)));
 
-//show_debug_message("view width: " + string(view_width));
-//show_debug_message("view height: " + string(view_height));
+show_debug_message("view width: " + string(view_width));
+show_debug_message("view height: " + string(view_height));
 
-//show_debug_message("app surf width: " + string(surface_get_width(application_surface)));
-//show_debug_message("app surf height: " + string(surface_get_height(application_surface)));
+show_debug_message("app surf width: " + string(surface_get_width(application_surface)));
+show_debug_message("app surf height: " + string(surface_get_height(application_surface)));
 
-//show_debug_message("Window Size: " + string(window_get_width()) + ", " + string(window_get_height()));
+show_debug_message("Window Size: " + string(window_get_width()) + ", " + string(window_get_height()));
 
-//show_debug_message("GUI width: " + string(display_get_gui_width()));
-//show_debug_message("GUI height: " + string(display_get_gui_height()));
+show_debug_message("GUI width: " + string(display_get_gui_width()));
+show_debug_message("GUI height: " + string(display_get_gui_height()));
+

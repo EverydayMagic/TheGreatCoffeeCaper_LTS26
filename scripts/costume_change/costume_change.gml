@@ -4,6 +4,7 @@
 ///@param *image_index*
 ///@param *loop?*(type_"noloop")
 ///@param *flip?*(type_"flip")
+///@param *addmove?*(type_"nomove")
 function costume_change(_obj, _spr_index){
 	var _loopthenadd = false;
 	
@@ -45,7 +46,7 @@ function costume_change(_obj, _spr_index){
 					_obj.image_xscale = -1;	
 				} else _obj.image_xscale = 1;
 				
-				if (argument_count < 6)
+				if (argument_count < 7)
 				{
 					if (is_string(argument[2]))
 					{
@@ -57,13 +58,33 @@ function costume_change(_obj, _spr_index){
 								return true;
 							}
 							
-						} else { add_move_order(); return true; }
+						} else {
+							if (argument[2] != "nomove" && argument[3] != "nomove" && argument[4] != "nomove" && argument[5] != "nomove")
+							{
+								add_move_order();
+							}
+							return true; 
+						}
 					
-					} else { add_move_order(); return true; }
+					} else { 
+						if (argument[2] != "nomove" && argument[3] != "nomove" && argument[4] != "nomove" && argument[5] != "nomove")
+						{
+							add_move_order();
+						}
+						return true; 
+					}
 				}
 				
 				
-			} else { _obj.image_speed = 1; _obj.image_xscale = 1; add_move_order(); return true; }
+			} else { 
+				_obj.image_speed = 1; 
+				_obj.image_xscale = 1; 
+				if (argument[2] != "nomove" && argument[3] != "nomove" && argument[4] != "nomove" && argument[5] != "nomove")
+				{
+					add_move_order();
+				}
+				return true; 
+			}
 
 		} else exit;
 

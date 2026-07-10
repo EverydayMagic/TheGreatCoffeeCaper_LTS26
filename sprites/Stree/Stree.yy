@@ -24,6 +24,7 @@
   "height":48,
   "HTile":false,
   "layers":[
+    {"$GMImageLayer":"","%Name":"6290adba-1f39-4995-ad1c-8d14f0eab30c","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"6290adba-1f39-4995-ad1c-8d14f0eab30c","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":false,},
     {"$GMImageLayer":"","%Name":"f7ed318b-393b-49d2-84a8-ea5282b50791","blendMode":0,"displayName":"default","isLocked":false,"name":"f7ed318b-393b-49d2-84a8-ea5282b50791","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"Stree",

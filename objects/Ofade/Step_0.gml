@@ -280,7 +280,10 @@ switch (trans_type)
 					}
 
 				}
-			} else fadeLevel -= fadeSpd;
+			} else {
+				if (delay_out > 0 && alarm[1] = -1){ alarm[1] = delay_out; }
+				if (delay_out <= 0){ fadeLevel -= fadeSpd; }
+			}
 
 			if (fadeLevel <= 0)
 			{ 

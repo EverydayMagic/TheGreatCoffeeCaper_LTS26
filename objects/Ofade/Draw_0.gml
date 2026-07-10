@@ -91,9 +91,10 @@ switch (trans_type)
 			} else {
 				if (instance_exists(Oplayer))
 				{
-					Oplayer.state = PlayerStateFree;
+					Oplayer.state = player_old_state;
 					Oplayer.visible = true;
 				}
+				if (instance_exists(Ocharliemouse)){ Ocharliemouse.visible = true; }
 				if (instance_exists(Oclouds)){ Oclouds.alarm[0] = 1; }
 				global.transitioning = false;
 				instance_destroy();

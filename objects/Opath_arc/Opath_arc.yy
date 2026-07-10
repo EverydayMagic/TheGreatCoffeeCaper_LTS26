@@ -11,8 +11,8 @@
   "name":"Opath_arc",
   "overriddenProperties":[],
   "parent":{
-    "name":"Movement SFX",
-    "path":"folders/Objects/Movement SFX.yy",
+    "name":"Movement FX",
+    "path":"folders/Objects/Movement FX.yy",
   },
   "parentObjectId":null,
   "persistent":false,

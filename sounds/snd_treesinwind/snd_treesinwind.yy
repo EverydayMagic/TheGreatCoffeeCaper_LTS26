@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":66.85715,
+  "duration":66.85716,
   "exportDir":"",
   "name":"snd_treesinwind",
   "parent":{

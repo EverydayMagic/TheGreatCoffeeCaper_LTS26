@@ -35,5 +35,5 @@
     "path":"sprites/Spartypoint/Spartypoint.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

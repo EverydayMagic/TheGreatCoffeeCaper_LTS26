@@ -9,7 +9,7 @@ if (!instance_exists(Oplayer))
 	}
 }
 
-if (instance_exists(_player))
+if (instance_exists(_player) && !freeze_point)
 {
 	var _pm = Opartypoint_manager;
 	

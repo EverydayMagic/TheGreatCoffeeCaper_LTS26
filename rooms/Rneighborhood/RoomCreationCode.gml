@@ -27,3 +27,13 @@ if (global.saveslot_story[global.saveslot][STORY_PACE.OPEN_UP_BANDITS] = 1 && gl
 		image_yscale = 0.125;
 	}
 }
+
+if (global.saveslot_story[global.saveslot][STORY_PACE.HAMMER_FOUND] = 1 && global.saveslot_story[global.saveslot][STORY_PACE.TROJAN_DEER_CONFRONT] = 0)
+{
+	//create trigger for Trojan Deer Confront
+	with (instance_create_layer(16, 48, "Instances", trojandeerconfront_tripwire))
+	{
+		image_xscale = 0.25;
+		image_yscale = 0.25;
+	}
+}

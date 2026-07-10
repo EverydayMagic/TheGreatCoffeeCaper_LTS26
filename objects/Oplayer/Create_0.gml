@@ -1,6 +1,5 @@
 
 state = PlayerStateFree;
-state_manual = false;
 
 collisionMap = layer_tilemap_get_id(layer_get_id("Col"));
 
@@ -28,6 +27,8 @@ room_in = room;
 in_trojan_deer = true;
 
 invincible_blink = 0;
+
+depth_manual = false;
 
 //For Character Following
 array_size = 50; //the amount of positions to record

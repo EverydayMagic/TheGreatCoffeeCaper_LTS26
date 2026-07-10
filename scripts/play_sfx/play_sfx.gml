@@ -1,4 +1,4 @@
-function play_sfx(_sound_id, _vol_mod = 1, _pitch = 1, _loop = false){
+function play_sfx(_sound_id, _vol = 1, _pitch = 1, _loop = false){
 	
 	if (audio_exists(_sound_id))
 	{
@@ -8,7 +8,7 @@ function play_sfx(_sound_id, _vol_mod = 1, _pitch = 1, _loop = false){
 			audio_stop_sound(_sound_id);	
 		}
 		
-		audio_play_sound(_sound_id, 9, _loop, _vol_mod * global.settings.volume, 0, _pitch);
+		audio_play_sound(_sound_id, 9, _loop, _vol * global.settings.volume, 0, _pitch);
 		
 		return true;
 	

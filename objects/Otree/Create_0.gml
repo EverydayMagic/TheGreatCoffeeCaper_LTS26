@@ -7,4 +7,6 @@ thatonetree = false;
 
 old_depth = depth;
 
+appled = false;
 
+apple_max = 0;

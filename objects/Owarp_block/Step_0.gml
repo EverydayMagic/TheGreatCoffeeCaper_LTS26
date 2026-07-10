@@ -1,7 +1,13 @@
 var _player = Oplayer;
 if (!instance_exists(Oplayer) && instance_exists(Ohoots_cutscene)){ _player = Ohoots_cutscene; }
 if (!instance_exists(Oplayer) && !instance_exists(Ohoots_cutscene) && instance_exists(Otrojandeer)){ _player = Otrojandeer; }
-if (!global.cutsceneActive && instance_exists(_player))
+if (!instance_exists(Oplayer) && !instance_exists(Ohoots_cutscene) && !instance_exists(Otrojandeer)){ _player = noone; }
+var _player_running = false;
+if (_player = Oplayer)
+{
+	if (Oplayer.state = PlayerStateRun && outin){ _player_running = true; }
+}
+if (!global.cutsceneActive && instance_exists(_player) && !_player_running)
 {
 
 	if (trans_type = "map")

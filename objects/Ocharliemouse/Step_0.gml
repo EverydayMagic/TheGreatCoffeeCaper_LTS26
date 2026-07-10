@@ -19,8 +19,49 @@ if (instance_exists(_player) && !global.cutsceneActive)
 	{
 		if (!instance_exists(Ofade) && !waitforinput)
 		{
-			//move towards party point
-			goTo_partypoint();
+			if (_player = Oplayer && Oplayer.state != PlayerStateRun)
+			{
+				//move towards party point
+				goTo_partypoint();
+				
+			} else {
+				switch (Oplayer.beat)
+				{
+					case 0:
+						//move toward player pos
+						if (!instance_exists(Omulti_goto))
+						{
+							var _x = x;
+							var _y = y;
+							with (instance_create_depth(0, 0, 0, Omulti_goto))
+							{
+								object = Ocharliemouse;
+								origin_x = _x;
+								origin_y = _y;
+								x_pos = [Oplayer.x];
+								y_pos = [Oplayer.y];
+								spd = 3;
+							}
+						} else if (x = Oplayer.x && y = Oplayer.y) {
+							while (instance_exists(Omulti_goto)){ instance_destroy(Omulti_goto); }
+							x = Oplayer.x;
+							y = Oplayer.y;
+							sprite_index = Scmouse_idle;
+							image_index = round(Oplayer.direction/90);
+							image_speed = 0;
+						}
+					break;
+					case 1:
+						while (instance_exists(Omulti_goto)){ instance_destroy(Omulti_goto); }
+						x = Oplayer.x;
+						y = Oplayer.y;
+						sprite_index = Scmouse_idle;
+						image_index = round(Oplayer.direction/90);
+						image_speed = 0;
+						visible = false;
+					break;
+				}
+			}
 		}
 	}
 	

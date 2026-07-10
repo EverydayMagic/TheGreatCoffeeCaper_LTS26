@@ -16,3 +16,4 @@ dir_needed = 0;
 
 party_dir = -1;
 
+outin = false;

@@ -59,6 +59,9 @@ if (obj != noone && !curving) //if we just made curve
 	{
 		if (obj.path_position = 1)
 		{
+			obj.x = x2;
+			obj.y = y2;
+			
 			//add to cutscene
 			if (global.cutsceneActive)
 			{
@@ -70,6 +73,8 @@ if (obj != noone && !curving) //if we just made curve
 			
 			if (path_exists(path))
 				path_delete(path);
+				
+			if (destroy_afterward){ instance_destroy(); }
 		}
 	}
 }

@@ -183,6 +183,18 @@ function get_scene_cast(_scene_num){
 			global.scene_cast[2] = puffy;
 			global.scene_cast[3] = sniffles;
 		break;
+		case STORY_PACE.OUTSIDE_SNIFF_HOUSE:
+			global.scene_cast = [
+				hootsworth,
+				charlie,
+			]
+		break;
+		case 99:
+			global.scene_cast = [
+				hootsworth,
+				charlie,
+			]
+		break;
 		
 		
 		default: show_error("CUTSCENE NUMBER DOES NOT EXIST", true);
@@ -210,7 +222,16 @@ function get_scene_cast(_scene_num){
 			} else {
 				if (_scene_num = 1 && !instance_exists(Oplayer))
 					instance_create_layer(120, 72, "Instances", Oplayer);
-				with (instance_create_depth(Oplayer.x, Oplayer.y, Oplayer.depth, hootsworth))
+				var _playerx = 0;
+				var _playery = 0;
+				var _playerdepth = 0;
+				if (instance_exists(Oplayer))
+				{
+					_playerx = Oplayer.x;
+					_playery = Oplayer.y;
+					_playerdepth = Oplayer.depth;
+				}
+				with (instance_create_depth(_playerx, _playery, _playerdepth, hootsworth))
 				{
 					//var _p = Oplayer;
 					//if (instance_exists(_p))

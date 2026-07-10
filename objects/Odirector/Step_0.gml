@@ -65,12 +65,20 @@ switch (room) //For when cutscenes start when the player immeadietly enters the 
 	break;
 	
 	case Rsnifflehouse:
-		//if (global.saveslot_story[global.saveslot][STORY_PACE.CONFRONT_IN_SNIFF_HOUSE] = 0 && global.saveslot_story[global.saveslot][STORY_PACE.TROJAN_DEER_CONFRONT] = 1)
-		//
+		if (global.saveslot_story[global.saveslot][STORY_PACE.CONFRONT_IN_SNIFF_HOUSE] = 0 && global.saveslot_story[global.saveslot][STORY_PACE.TROJAN_DEER_CONFRONT] = 1)
+		{
 			ex_cutscene("Confront In Sniff House");	
-		//}
+		}
 	break;
-	
+	case Rneighborhood:
+		if (global.saveslot_story[global.saveslot][STORY_PACE.CONFRONT_IN_SNIFF_HOUSE] = 1 && global.saveslot_story[global.saveslot][STORY_PACE.OUTSIDE_SNIFF_HOUSE] = 0)
+		{
+			ex_cutscene("Outside Sniff House");	
+		}
+	break;
+	case Rtestfollow:
+		ex_cutscene("ShowNoah");
+	break;
 	
 }
 

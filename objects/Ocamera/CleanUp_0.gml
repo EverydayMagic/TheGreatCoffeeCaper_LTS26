@@ -1,0 +1,1 @@
+//sprite_delete(test_border);

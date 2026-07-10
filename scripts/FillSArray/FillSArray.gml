@@ -10,7 +10,7 @@ function fill_savearray() {
 				y: y,
 				spr_index: sprite_get_name(sprite_index),
 				img_index: image_index,
-				_state: state,
+				_state: script_get_name(state),
 				room: room_in,
 				depth: depth,
 				direction: direction,

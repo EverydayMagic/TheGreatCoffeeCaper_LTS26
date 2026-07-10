@@ -24,6 +24,8 @@ newMapIndex = -1;
 
 inout = false;
 
+delay_out = 0;
+
 loading = false;
 load_out = false;
 
@@ -60,5 +62,11 @@ wait_time = 45;
 iris_fade_start_fade = false;
 
 party_dir = -1;
+
+player_old_state = PlayerStateFree;
+if (instance_exists(Oplayer))
+{
+	player_old_state = Oplayer.state;	
+}
 
 depth = -999;
