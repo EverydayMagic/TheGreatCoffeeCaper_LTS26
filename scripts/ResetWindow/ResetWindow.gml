@@ -23,6 +23,7 @@ function reset_window(){
 
 			surface_resize(application_surface, view_width * app_scale, view_height * app_scale);
 			display_set_gui_size(window_width * app_scale, window_height * app_scale);	
+			display_set_gui_size(view_width * 2, view_height * 2);
 		}
 		
 		return;
@@ -43,16 +44,17 @@ function reset_window(){
 		window_scale = max(window_scale, 1);
 		app_scale = window_scale;
 
-		window_width = base_window_width * window_scale;
-		window_height = base_window_height * window_scale;
+		window_width = view_width * window_scale;
+		window_height = view_height * window_scale;
 
 		window_set_size(window_width, window_height);
 
 		alarm[0] = 1;
 
 		surface_resize(application_surface, view_width * app_scale, view_height * app_scale);
-		application_surface_draw_enable(false);
+		//application_surface_draw_enable(false);
 		display_set_gui_size(base_window_width * app_scale, base_window_height * app_scale);
-		gpu_set_texfilter(false);
+		display_set_gui_size(view_width * 2, view_height * 2);
+		//gpu_set_texfilter(false);
     }
 }

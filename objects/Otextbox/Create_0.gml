@@ -79,6 +79,8 @@
 	inline_spr_width_online = 0;
 
 	surface = 0;
+	
+	def = -1;
 
 	call_later(0.25, time_source_units_seconds, function(){
 		bubdown =! bubdown;
@@ -129,7 +131,7 @@
 			//get the x position for the textbox
 			//character on the left
 			text_x_offset[p] = 0;
-			portrait_x_offset[p] = 12;
+			portrait_x_offset[p] = 12.5;
 			//character on right
 			if (speaker_sprite[p] == -1)
 			{
@@ -231,6 +233,12 @@
 								inline_spr_width_online += sprite_get_width(_spr_id);
 							}
 						}
+					
+					//pause
+						//if (char[c, p] = "^")
+						//{
+							
+						//}
 					
 				#endregion
 				

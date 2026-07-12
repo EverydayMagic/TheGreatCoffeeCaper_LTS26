@@ -23,7 +23,7 @@ alarm[0] = 1;
 surface_resize(application_surface, view_width * app_scale, view_height * app_scale);
 //application_surface_draw_enable(false);
 display_set_gui_size(base_window_width * app_scale, base_window_height * app_scale);
-display_set_gui_size(view_width * app_scale, view_height * app_scale);
+display_set_gui_size(view_width * 2, view_height * 2);
 
 //test_border = sprite_add(working_directory + "deltarune_forest_bg.png", 1, false, false, 0, 0);
 

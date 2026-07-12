@@ -176,4 +176,11 @@ switch(_text_id) {
 		//default: Text("Um, Frank?&I think there's been an error.");
 
 }
+
+if (def = -1)
+{
+	Text("It's in a state between definition and imagination.");
+	if (global.cutsceneActive){ add_move_order(); }
+}
+
 }

@@ -221,7 +221,8 @@ function textbox_change(_spr){
 function Text(_text){
 
 			set_defaults_for_text();
-			text[page_number] = _text
+			text[page_number] = _text;
+			def = 0;
 
 			//get character info
 			if argument_count > 1 {
@@ -404,6 +405,11 @@ function Text(_text){
 								snd[page_number] = hoots_talk;
 								speaker_sprite[page_number] = Shoots_faces;
 								speaker_imgindex[page_number] = 20;
+							break;
+							case "Hoots Sympa":
+								snd[page_number] = hoots_talk;
+								speaker_sprite[page_number] = Shoots_faces;
+								speaker_imgindex[page_number] = 21;
 							break;
 						
 						/////////////////

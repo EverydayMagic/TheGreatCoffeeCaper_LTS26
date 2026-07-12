@@ -33,6 +33,16 @@ if ((songAsset != targetSongAsset))
 		{
 			//Play the song and store it's instance in a variable
 			songInstance = audio_play_sound(targetSongAsset, 4, songLoop, 1, songStartTime, songPitch);
+			if (songLoop)
+			{
+				audio_sound_loop_start(songInstance, songStartLoop);
+				if (songEndLoop <= 0)
+				{
+					songEndLoop = audio_sound_length(songInstance);	
+				}
+				audio_sound_loop_end(songInstance, songEndLoop);
+				audio_sound_loop(songInstance, songLoop);
+			}
 	
 			//Start the song's volume at 0
 			audio_sound_gain(songInstance, 0, 0);
@@ -101,7 +111,7 @@ if (audio_is_playing(songInstance))
 			array_delete(fadeOutInstances, i, 1);
 			array_delete(fadeOutInstanceVol, i, 1);
 			array_delete(fadeOutInstTime, i, 1);
-			audio_destroy_stream(oldSongAsset);
+			
 			//set the loop back 1 since we just deleted an entry
 			i--;
 		}

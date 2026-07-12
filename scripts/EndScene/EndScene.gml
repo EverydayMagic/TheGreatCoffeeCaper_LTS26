@@ -1,4 +1,4 @@
-function end_scene(_reset_points = true, _cutsceneActive = false){
+function end_scene(_reset_points = true, _cutsceneActive = false, _cmouse_create = false){
 	//erase the array for the next cutscene 
 	//and tell the game we finished with this one
 	if (!instance_exists(Otextbox))
@@ -21,6 +21,10 @@ function end_scene(_reset_points = true, _cutsceneActive = false){
 	
 	
 		if (_reset_points){ Opartypoint_manager.reset_points(); }
-	
+		
+		if (_cmouse_create && instance_exists(Ocharliemouse_cutscene))
+		{
+			Ocharliemouse_cutscene.alarm[0] = 1;
+		}
 	}
 }

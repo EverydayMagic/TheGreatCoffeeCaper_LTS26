@@ -3,6 +3,7 @@ if (global.cutsceneActive = false)
 	if (!instance_exists(Ofade)) //this check is for end of the demo
 	{
 		instance_activate_object(Oplayer);
+		if (!instance_exists(Oplayer)){ instance_create_depth(0, 0, 0, Oplayer); }
 		Oplayer.x = x;
 		Oplayer.y = y;
 		Oplayer.image_index = image_index;

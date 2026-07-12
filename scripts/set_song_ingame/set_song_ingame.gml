@@ -1,5 +1,5 @@
 
-function set_song_ingame(_song, _fadeOutCurrentSong = 0, _fadeIn = 0, _startTime = 0, _loop = true, _songAfterPlay = noone, _crossFade = false, _linkedStart = false, _saveOldTime = false, _useOldTime = false){
+function set_song_ingame(_song, _fadeOutCurrentSong = 0, _fadeIn = 0, _startTime = 0, _loop = true, _songAfterPlay = noone, _crossFade = false, _linkedStart = false, _saveOldTime = false, _useOldTime = false, _startLoop = 0, _endLoop = 0){
 
 	//_song = set to any song (including "noone" to stop or fade the track out)
 	//_fadeOutCurrentSong = time (in frames) the current song (if playing) will take to fade out
@@ -49,6 +49,8 @@ function set_song_ingame(_song, _fadeOutCurrentSong = 0, _fadeIn = 0, _startTime
 		crossFade = _crossFade;
 		oldSongPitch = songPitch;
 		songPitch = 1;
+		songStartLoop = _startLoop;
+		songEndLoop = _endLoop;
 	}
 	
 }

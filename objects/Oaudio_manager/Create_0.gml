@@ -35,6 +35,10 @@ songPitch = 1;
 oldSongPitch = 1;
 
 songLoop = true;
+
+songStartLoop = 0;
+songEndLoop = 0;
+
 songAfterPlay = noone; //song to succeed song that is only playing once (like title theme)
 
 crossFade = false;

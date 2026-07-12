@@ -306,6 +306,7 @@ function cut_trojandeerconfront(){
 				Ostump.sprite_index = Sstump_run_r;
 			
 				//ROMEO AND JULIET MUSIC
+				set_song_ingame("Fantasy Overture.ogg");
 			
 				add_move_order();
 			}
@@ -341,7 +342,7 @@ function cut_trojandeerconfront(){
 				//destroy love bubble
 				if (instance_exists(Obubble)){ instance_destroy(Obubble); }
 				//RECORD SCREETCH SFX
-			
+				set_song_ingame(noone);
 			
 				add_move_order();
 			}
