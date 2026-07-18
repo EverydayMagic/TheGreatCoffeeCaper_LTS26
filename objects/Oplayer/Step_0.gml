@@ -123,12 +123,12 @@ if (Omenu.visible != true)
 	{
 		ibox_create = true;	
 	} else {
-		if (ibox_timer > 0)
-			ibox_timer--;
+		if (ibox_timer > 0 && !instance_exists(Otextbox) && !instance_exists(_ibox))
+			ibox_timer--;	
 	}
 
 	if (ibox_timer = 0 && ibox_create = true && !instance_exists(Otextbox))
-		instance_create_depth(x, y, depth - 1, _ibox);
+		instance_create_depth(x, y, -room_height, _ibox);
 }
 
 
@@ -150,7 +150,7 @@ if (global.sprinting_unlocked)
 		if (_in_party)
 		{
 			//check for keyboard input
-			if (keyboard_check(ord("X")))
+			if (keyboard_check(ord("X")) && state = PlayerStateFree)
 			{
 				state = PlayerStateRun;		
 			}

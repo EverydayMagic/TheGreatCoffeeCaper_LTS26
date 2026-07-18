@@ -14,6 +14,8 @@ if (bounce && alarm[0] = -1)
 	alarm[0] = 1;
 }
 
+if (instance_exists(Ofade) && !global.cutsceneActive){ visible = false; }
+
 depth = -y - 100;
 
 if (kill_time > 0 && alarm[1] = -1){ alarm[1] = kill_time; }

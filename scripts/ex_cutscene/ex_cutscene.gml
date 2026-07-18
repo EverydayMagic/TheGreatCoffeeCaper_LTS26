@@ -99,6 +99,9 @@ function ex_cutscene(_cut_id){
 		case "Outside Sniff House":
 			cut_outsidesniffhouse();
 		break;
+		case "Slick Quest":
+			cut_slickquest();
+		break;
 		case "ShowNoah":
 			cut_shownoah();
 		break;

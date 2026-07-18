@@ -306,7 +306,7 @@ function cut_trojandeerconfront(){
 				Ostump.sprite_index = Sstump_run_r;
 			
 				//ROMEO AND JULIET MUSIC
-				set_song_ingame("Fantasy Overture.ogg");
+				set_song_ingame("Fantasy Overture.ogg", 0, 0, 0, true, noone, 0, false, false, false, 1, 0, 120, 4);
 			
 				add_move_order();
 			}

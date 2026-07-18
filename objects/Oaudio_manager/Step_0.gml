@@ -34,7 +34,7 @@ if ((songAsset != targetSongAsset))
 			//Play the song and store it's instance in a variable
 			songInstance = audio_play_sound(targetSongAsset, 4, songLoop, 1, songStartTime, songPitch);
 			if (songLoop)
-			{
+			{	
 				audio_sound_loop_start(songInstance, songStartLoop);
 				if (songEndLoop <= 0)
 				{

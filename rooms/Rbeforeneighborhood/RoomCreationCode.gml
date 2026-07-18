@@ -31,3 +31,16 @@ if (global.saveslot_story[global.saveslot][STORY_PACE.MEET_BOOKWORM] = 1 && glob
 {
 	instance_create_depth(121, 85, 0, Obookworm);
 }
+
+if (global.saveslot_story[global.saveslot][STORY_PACE.CONFRONT_IN_SNIFF_HOUSE] = 1) //done in sniffle house and time for main quest
+{
+	//create slick
+	instance_create_layer(80, 96, "Instances", Ofox);
+	//bub
+	with (instance_create_depth(0, 0, 0, Obubble))
+	{
+		char_track = Ofox;	
+		bubble_type = 5;
+		bounce = true;
+	}
+}

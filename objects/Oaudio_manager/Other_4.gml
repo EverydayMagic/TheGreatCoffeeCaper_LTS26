@@ -36,7 +36,7 @@
 							if (songAssetString != (working_directory + "/Music/" + "Title Theme START LOOP.ogg"))
 								set_song_ingame("Title Theme CONTINUED LOOP.ogg");
 						} else {
-							set_song_ingame("Title Theme START LOOP.ogg", 0, 0, 0, true, noone, false, false, false, false, );
+							set_song_ingame("Title Theme START LOOP.ogg", 0, 0, 0, true, noone, false, false, false, false, 15, 20);
 						}
 					} else {
 						set_song_ingame("Title Theme START LOOP.ogg", 0, 0, 0, false, "Title Theme CONTINUED LOOP.ogg");

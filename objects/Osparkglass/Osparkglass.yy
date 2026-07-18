@@ -1,17 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"Ofox",
+  "%Name":"Osparkglass",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"Ofox",
+  "name":"Osparkglass",
   "overriddenProperties":[],
   "parent":{
-    "name":"NPC",
-    "path":"folders/Objects/Characters/NPC.yy",
+    "name":"MGlass Related",
+    "path":"folders/Objects/Clue Battles/MGlass Related.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -32,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sfox_lean",
-    "path":"sprites/Sfox_lean/Sfox_lean.yy",
+    "name":"Ssparkglass_battle",
+    "path":"sprites/Ssparkglass_battle/Ssparkglass_battle.yy",
   },
   "spriteMaskId":null,
   "visible":true,

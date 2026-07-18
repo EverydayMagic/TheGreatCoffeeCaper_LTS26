@@ -189,6 +189,12 @@ function get_scene_cast(_scene_num){
 				charlie,
 			]
 		break;
+		case STORY_PACE.SLICK_QUEST:
+			global.scene_cast = [
+				hootsworth,
+				charlie,
+			]
+		break;
 		case 99:
 			global.scene_cast = [
 				hootsworth,
