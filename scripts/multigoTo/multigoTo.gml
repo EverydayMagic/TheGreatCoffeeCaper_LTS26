@@ -1,10 +1,11 @@
 ///@description for the optional arguments, put -1 to use default values
-function multigoTo(_obj, _ori_x, _ori_y, _x_pos, _y_pos, _spd, _spr_list = [], _spr_done = -1, _img_done = 0, _img_spd_done = 0, _imagespd_manual = noone, _uphill_move = false, _loop_move = false, _pause_after = -1){
+function multigoTo(_obj, _ori_x, _ori_y, _x_pos, _y_pos, _spd, _spr_list = [], _spr_done = -1, _img_done = 0, _img_spd_done = 0, _imagespd_manual = noone, _hill_move = false, _loop_move = false, _pause_after = -1){
 	if (_spr_list = -1){ _spr_list = []; }
 	if (_img_done = -1){ _img_done = 0; }
 	if (_img_spd_done = -1){ _img_spd_done = 0; }
 	if (_imagespd_manual = -1){ _imagespd_manual = noone; }
-	if (_uphill_move = -1){ _uphill_move = false; }
+	if (_hill_move = -1){ _hill_move = false; }
+	if (_hill_move = true){ _hill_move = "up"; }
 	if (_loop_move = -1){ _loop_move = false; }
 	
 	with (instance_create_depth(0, 0, 0, Omulti_goto))
@@ -20,7 +21,7 @@ function multigoTo(_obj, _ori_x, _ori_y, _x_pos, _y_pos, _spd, _spr_list = [], _
 		img_done = _img_done;
 		img_spd_done = _img_spd_done;
 		imagespd_manual = _imagespd_manual;
-		uphill_move = _uphill_move;
+		hill_move = _hill_move;
 		loop_move = _loop_move;
 		pause_after_beat = _pause_after;
 	}

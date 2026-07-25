@@ -38,6 +38,12 @@ if (global.saveslot_story[global.saveslot][STORY_PACE.MEET_CLAWDINE] = 0) //is M
 			image_xscale = 2.25;
 			image_yscale = 0.75;
 		}
+		with (instance_create_layer(64, 44, "Invis_Text", Oinvissign)) //invissign
+		{
+			image_xscale = 1.125;
+			image_yscale = 0.5;
+			text_id = "plotlogseepy";
+		}
 	
 	//flavor text by bed
 		with (instance_create_layer(128, 16, "Invis_Text", Oinvissign))
@@ -57,8 +63,9 @@ if (global.saveslot_story[global.saveslot][STORY_PACE.MEET_CLAWDINE] = 0) //is M
 			dir_needed = 1;
 		}
 		
-} else if (global.saveslot_story[global.saveslot][STORY_PACE.HAMMER_FOUND] = 0) { //if Hammer Found not done
-	
+}
+if (global.saveslot_story[global.saveslot][STORY_PACE.MEET_CLAWDINE] = 1 && global.saveslot_story[global.saveslot][STORY_PACE.HAMMER_FOUND] = 0) //if Hammer Found not done
+{
 	//create clawdine
 		with (instance_create_depth(81, 82, 100, Oclawdine))
 		{
@@ -108,6 +115,12 @@ if (global.saveslot_story[global.saveslot][STORY_PACE.MEET_CLAWDINE] = 0) //is M
 			image_xscale = 2.25;
 			image_yscale = 0.75;
 		}
+		with (instance_create_layer(64, 44, "Invis_Text", Oinvissign)) //invissign
+		{
+			image_xscale = 1.125;
+			image_yscale = 0.5;
+			text_id = "plotlogseepy";
+		}
 	
 	//flavor text by bed
 		with (instance_create_layer(128, 16, "Invis_Text", Oinvissign))
@@ -127,4 +140,21 @@ if (global.saveslot_story[global.saveslot][STORY_PACE.MEET_CLAWDINE] = 0) //is M
 			dir_needed = 1;
 		}
 	
+}
+
+if (global.saveslot_story[global.saveslot][STORY_PACE.CONFRONT_IN_SNIFF_HOUSE] = 1)
+{
+	//plot log
+	instance_create_layer(104, 16, "Instances", Olog_scratch);
+	with (instance_create_layer(65, 12, "Invis_Text", Oinvissign)) //invissign
+	{
+		image_xscale = 1.125;
+		image_yscale = 0.5;
+		text_id = "plotlogseepy";
+	}
+	with (instance_create_layer(94, 14, "Col", Ocol)) //collision
+	{
+		image_xscale = 2.25;
+		image_yscale = 0.75;
+	}
 }

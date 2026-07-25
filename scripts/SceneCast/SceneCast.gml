@@ -195,6 +195,20 @@ function get_scene_cast(_scene_num){
 				charlie,
 			]
 		break;
+		case STORY_PACE.CLAWDINE_UPGRADE_QUEST_BEFOREPUSH:
+			global.scene_cast = [
+				hootsworth,
+				charlie,
+				clawdine,
+			]
+		break;
+		case STORY_PACE.CLAWDINE_UPGRADE_QUEST:
+			global.scene_cast = [
+				hootsworth,
+				charlie,
+				clawdine,
+			]
+		break;
 		case 99:
 			global.scene_cast = [
 				hootsworth,

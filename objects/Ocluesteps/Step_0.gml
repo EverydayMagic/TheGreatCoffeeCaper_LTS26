@@ -151,6 +151,7 @@ if (Ocluehunt.cluehunt_active && instance_exists(Oplayer))
 
 
 //Creating Dust Clouds When Player Over Footprints
+/*
 if (instance_exists(Oplayer))
 {
 	var _inst = instance_number(Ocluesteps) - 1;
@@ -175,8 +176,13 @@ if (instance_exists(Oplayer))
 		}
 	}
 }
+*/
 
-
+//Particle Hint
+if (class = "spark")
+{
+	
+}
 
 
 

@@ -58,7 +58,7 @@
 		}
 		
 		//dont let the block to a grid space that has a wall in it
-		if (place_meeting(target_x, target_y, Ocol))
+		if (place_meeting(target_x, target_y, Ocol) && !col_ignore)
 		{
 			xspd = 0;
 			yspd = 0;

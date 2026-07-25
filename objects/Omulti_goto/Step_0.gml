@@ -1,7 +1,9 @@
 if (object != noone && instance_exists(object) && !multi_goto_done && pause_done)
 {
-	if (uphill_move)
+	if (hill_move != false)
 	{
+		anim_curve = (hill_move = "down") ? animcurve_get_channel(loveletter_animcurve, "curve1") : animcurve_get_channel(loveletter_animcurve, "curve1");
+		
 		//need to calc dists (calc is short for calculate)
 		if (array_length(dist_x) <= 0)
 		{
@@ -68,7 +70,7 @@ if (object != noone && instance_exists(object) && !multi_goto_done && pause_done
 			Ohoots_cutscene.begin_record = true;
 	}
 	
-	if (uphill_move){ exit; }
+	if (hill_move != false){ exit; }
 	
 	var _checkx = false;
 	var _checky = false;

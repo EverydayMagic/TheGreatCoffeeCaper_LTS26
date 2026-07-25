@@ -102,6 +102,12 @@ function ex_cutscene(_cut_id){
 		case "Slick Quest":
 			cut_slickquest();
 		break;
+		case "Clawdine Upgrade Quest BeforePush":
+			cut_clawdineupgradequest_beforepush();
+		break;
+		case "Clawdine Upgrade Quest":
+			cut_clawdineupgradequest();
+		break;
 		case "ShowNoah":
 			cut_shownoah();
 		break;

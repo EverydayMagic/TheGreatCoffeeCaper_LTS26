@@ -21,4 +21,3 @@ stick_start_x = x;
 
 
 
-

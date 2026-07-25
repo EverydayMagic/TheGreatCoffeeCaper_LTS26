@@ -43,8 +43,7 @@ if (trans_type = "iris")
 		}
 		
 
-		draw_clear(#390C14);
-		//draw_clear(c_white);
+		draw_clear(darkbrown_col);
 	    gpu_set_blendmode(bm_subtract);
 	    draw_circle(_x, _y, radius, false);
 	    gpu_set_blendmode(bm_normal);

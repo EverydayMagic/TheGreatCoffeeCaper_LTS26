@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.866062,
+  "duration":0.8660771,
   "exportDir":"",
   "name":"snd_throwing",
   "parent":{

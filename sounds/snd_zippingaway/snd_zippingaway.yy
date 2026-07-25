@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.96875,
+  "duration":0.96875286,
   "exportDir":"",
   "name":"snd_zippingaway",
   "parent":{

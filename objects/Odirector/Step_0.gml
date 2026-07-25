@@ -62,6 +62,10 @@ switch (room) //For when cutscenes start when the player immeadietly enters the 
 		{
 			ex_cutscene("Time To Flirt Deer");	
 		}
+		if (global.saveslot_story[global.saveslot][STORY_PACE.SLICK_QUEST] = 1 && global.saveslot_story[global.saveslot][STORY_PACE.CLAWDINE_UPGRADE_QUEST_BEFOREPUSH] = 0 && instance_exists(Oladder) && Oladder.onroof)
+		{
+			ex_cutscene("Clawdine Upgrade Quest BeforePush");	
+		}
 	break;
 	
 	case Rsnifflehouse:

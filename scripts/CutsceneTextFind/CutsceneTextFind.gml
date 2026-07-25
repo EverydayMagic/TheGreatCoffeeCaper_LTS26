@@ -38,4 +38,6 @@ function CutsceneTextFind(_text_id){
 	slickquest_text(_text_id);
 	
 	shownoah_text(_text_id);
+	
+	clawdineupgradequest_text(_text_id);
 }

@@ -8,6 +8,15 @@ if ((array_length(endy) > 0) && array_length(dist) <= 0)
 		starty[i] = char[i].y;
 		dist[i] = endy[i] - starty[i];
 	}
+	
+	//char swap index starter
+	if (array_length(char_spr_swap) > 0)
+	{
+		for (var _char = 0; _char < array_length(char_spr_swap); _char++)
+		{
+			char_spr_swap_index[_char] = 0;
+		}
+	}
 }
 
 if (array_length(dist) > 0)
@@ -29,6 +38,21 @@ if (array_length(dist) > 0)
 				endy[i] = starty[i];
 				starty[i] = char[i].y;
 				dist[i] = endy[i] - starty[i];
+			}
+			
+			if (fade_bubble)
+			{
+				for (var b = 0; b < array_length(char); b++)
+				{
+					var _char = char[b];
+					with (instance_create_depth(0, 0, 0, Obubble))
+					{
+						char_track = _char;
+						bubble_type = 5;
+						up_fade = true;	
+						up_fade_time = 5;
+					}
+				}
 			}
 		}
 	} else {

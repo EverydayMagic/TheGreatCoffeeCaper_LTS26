@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.455354,
+  "duration":0.45537415,
   "exportDir":"",
   "name":"snd_pushing",
   "parent":{

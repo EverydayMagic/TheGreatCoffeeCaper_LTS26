@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":8.790188,
+  "duration":8.790204,
   "exportDir":"",
   "name":"snd_snore",
   "parent":{

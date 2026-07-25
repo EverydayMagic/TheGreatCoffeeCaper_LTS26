@@ -14,6 +14,17 @@ if (bounce && alarm[0] = -1)
 	alarm[0] = 1;
 }
 
+if (up_fade)
+{
+	h_mod += 8/up_fade_time;
+	image_alpha -= 1/up_fade_time;
+	
+	if (image_alpha <= 0)
+	{
+		instance_destroy();	
+	}
+}
+
 if (instance_exists(Ofade) && !global.cutsceneActive){ visible = false; }
 
 depth = -y - 100;

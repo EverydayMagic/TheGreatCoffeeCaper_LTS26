@@ -37,10 +37,13 @@ if (global.saveslot_story[global.saveslot][STORY_PACE.CONFRONT_IN_SNIFF_HOUSE] =
 	//create slick
 	instance_create_layer(80, 96, "Instances", Ofox);
 	//bub
-	with (instance_create_depth(0, 0, 0, Obubble))
+	if (global.saveslot_story[global.saveslot][STORY_PACE.SLICK_QUEST] = 0)
 	{
-		char_track = Ofox;	
-		bubble_type = 5;
-		bounce = true;
+		with (instance_create_depth(0, 0, 0, Obubble))
+		{
+			char_track = Ofox;	
+			bubble_type = 1;
+			bounce = true;
+		}
 	}
 }

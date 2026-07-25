@@ -20,6 +20,9 @@ on_slide_area = false;
 special = false;
 temp = false;
 
+//in case we want to ignore collision blocks (like when pushing clawdine)
+col_ignore = false;
+
 
 uniform_handle = shader_get_uniform(SHDwhiteoutline, "texture_pixel");
 

@@ -37,6 +37,7 @@ if (text_pause_timer <= 0 && !_settingsmenupause) {
 		
         if (pausing[draw_char, page] && _check_pause) {
 			show_debug_message("PAUSE\n" + string(text_pause_time));
+			text_pause_count = clamp(text_pause_count, 0, array_length(text_pause_time) - 1);
 			text_pause_timer = text_pause_time[text_pause_count];
 			text_pause_count++;
 			text_pause_count_onpage[page]--;

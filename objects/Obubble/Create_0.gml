@@ -4,6 +4,8 @@ bubble_type = 0;
 h_mod = 2;
 
 bounce = false;
+up_fade = false;
+up_fade_time = 15;
 h_mod_track = h_mod;
 
 

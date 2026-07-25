@@ -137,7 +137,7 @@ function cut_confrontinsniffhouse(){
 					spd = 3;
 					spr_list = [Scmouse_walkl];	
 					spr_done = Scmouse_interrogate;
-					uphill_move = true;
+					hill_move = "up";
 				}
 				
 				//hoots move to a more convienient spot
@@ -333,7 +333,7 @@ function cut_confrontinsniffhouse(){
 						y_pos = [108];
 						spd = 3;
 						spr_list = [Scmouse_diag_shock];
-						uphill_move = true;	
+						hill_move = "up";	
 					}
 			} else if (Opuffy.y = 111) {
 				while (instance_exists(Omulti_goto)){ instance_destroy(Omulti_goto); }
@@ -366,7 +366,7 @@ function cut_confrontinsniffhouse(){
 						y_pos = [96];
 						spd = 3;
 						spr_list = [Ssniffles_stroller];
-						uphill_move = true;
+						hill_move = "up";
 						img_spd_done = 0;
 					}
 				//egg stroller
@@ -379,7 +379,7 @@ function cut_confrontinsniffhouse(){
 						y_pos = [120];
 						spd = 3;
 						spr_list = [Sstroller_noegg];
-						uphill_move = true;	
+						hill_move = "up";	
 					}
 			} else if (Opuffy.y = 122 && Osniffles.y = 96 && Oegg_stroller.x = 57) {
 				while (instance_exists(Omulti_goto)){ instance_destroy(Omulti_goto); }

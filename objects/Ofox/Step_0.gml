@@ -1,15 +1,18 @@
-if (global.saveslot_story[global.saveslot][STORY_PACE.INVESTIGATE_CUPOJOE] = 0)//Invest Cup O Joe not done
+if (instance_exists(Oplayer) && Oplayer.state = PlayerStateFree)
 {
-	if (instance_exists(Ointeractbox) && !instance_exists(Otextbox) && !global.gamePaused && !Ocluehunt.cluehunt_active && !Ocluehunt.trans_to_battle)
+	if (global.saveslot_story[global.saveslot][STORY_PACE.INVESTIGATE_CUPOJOE] = 0)//Invest Cup O Joe not done
 	{
-		if (place_meeting(x, y, Ointeractbox))
+		if (instance_exists(Ointeractbox) && !instance_exists(Otextbox) && !global.gamePaused && !Ocluehunt.cluehunt_active && !Ocluehunt.trans_to_battle)
 		{
-			if (!keepscool)
+			if (place_meeting(x, y, Ointeractbox))
 			{
-				create_textbox("foxkeepscool");
-				keepscool = true;
-			} else {
-				create_textbox("alwayskeepscool");	
+				if (!keepscool)
+				{
+					create_textbox("foxkeepscool");
+					keepscool = true;
+				} else {
+					create_textbox("alwayskeepscool");	
+				}
 			}
 		}
 	}

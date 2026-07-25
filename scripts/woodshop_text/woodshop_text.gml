@@ -5,6 +5,9 @@ function woodshopflavor_text(_text_id){
 			Text("No longer protecting the plot, this tired log decides to rest here.");
 				pause(30, 30, 10);
 		break;
+		//case "plotlogseepy":
+		//	Text(""
+		//break;
 		
 		case "woodshop_workbench":
 			Text("Now where could that hammer have gone...", "Hoots Think");

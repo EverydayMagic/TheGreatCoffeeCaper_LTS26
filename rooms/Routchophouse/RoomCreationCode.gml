@@ -47,3 +47,35 @@ if (global.saveslot_story[global.saveslot][STORY_PACE.INVESTIGATE_CUPOJOE] = 1) 
 	//	}
 	//}
 }
+
+if (global.saveslot_story[global.saveslot][STORY_PACE.CONFRONT_IN_SNIFF_HOUSE] = 1 && global.saveslot_story[global.saveslot][STORY_PACE.CLAWDINE_UPGRADE_QUEST] = 0)
+{
+	//sleeping clawdine
+	with (instance_create_layer(81, 28, "Instances", Oclawdine))
+	{
+		sprite_index = Sclawdine_sleep;
+		image_speed = 1;
+		depth_manual = true;
+		depth = -room_height;
+	}
+	
+	//collision for before push
+	with (instance_create_layer(52, 32, "Col", Ocol))
+	{
+		image_xscale = 1.5;
+		image_yscale = 2;
+	}
+	
+	//charlie invis text
+	with (instance_create_depth(52, 32, 0, Oinvissign))
+	{
+		text_id = "charlie_clawdinequestbeforepush";
+		dir_needed = 2;
+	}
+	
+	//destroy certain collision
+	//with (Ocol)
+	//{
+	//	if (x = 96 && y = 32 && image_yscale = 2){ instance_destroy(); }	
+	//}
+}
